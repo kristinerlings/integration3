@@ -7,11 +7,11 @@ import './style.css';
 const init = () => {
   const noiseOptions = {
     animate: true,
-    patternWidth: 403,
-    patternHeight: 200,
-    grainOpacity: 0.6,
-    grainDensity: 1,
-    grainWidth: 1,
+    patternWidth: 150.48,
+    patternHeight: 150.48,
+    grainOpacity: 0.06,
+    grainDensity: 1.6,
+    grainWidth: 1.2,
     grainHeight: 1,
   };
   /* 
