@@ -1,8 +1,10 @@
 import './src/css/style.css';
-import './src/js/script.js';
+/* import './src/js/script.js'; */
 
 /*Source: Grained bg>  https://github.com/sarathsaleem/grained
  * Grain generator:  http://sarathsaleem.github.io/grained/ */
+
+
 
 const init = () => {
   const noiseOptions = {
