@@ -2,14 +2,13 @@
 # https://swharden.com/blog/2022-04-24-github-actions-ftp/
 # https://www.voorhoede.nl/en/blog/super-fast-npm-install-on-github-actions/
 
-
 name: 🚀 FTP Deploy
 on:
   push:
     branches:
-      - main 
+      - main
   workflow_dispatch:
-  
+
 env:
   WEB_PATH: ~/www/harmonica
 jobs:
@@ -47,4 +46,3 @@ jobs:
       - name: Deploy web files with rsync
         run: |
           rsync -azh --delete-after -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{env.WEB_PATH}}
-`
