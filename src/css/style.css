@@ -1,5 +1,15 @@
 @import url('reset.css');
 
+/*
+1.Global 
+2.Typography
+3.Layout
+4.Responsive
+*/
+
+/*=======================================
+      1. Global Style
+=========================================*/
 *,
 *::before,
 *::after {
@@ -10,21 +20,22 @@ html,
 body {
   height: 100vh;
   background-color: var(--color-background);
-
 }
 
 :root {
   --color-background: #1E1A19;
   --color-gold: #E3C371;
-
   --fs-sm: 1rem;
   --fs-m: 1.25rem;
   --fs-l: 1.5rem;
   --fs-xl: 3rem;
   --fs-xxl: 5rem;
 
-  --ff-h2: ;
-  --ff-h1: ;
+
+  --ff-h1: quiche-sans,helvetica, sans-serif;
+  --ff-h2: fino-sans, helvetica, sans-serif;
+  --ff-h3: Helvetica, Arial, sans-serif;
+  --ff-p: montserrat, helvetica, sans-serif;
 
   --f-line-height: 1.15;
 
@@ -32,15 +43,26 @@ body {
 
   /*   font-synthesis: none;
   text-rendering: optimizeLegibility; */
-
 }
+
+
+/*=======================================
+       2. Typography
+=========================================
+*/
+
+
+
+/*=======================================
+       3.  Layout
+=========================================*/
 
 .bg__grained {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #1E1A19;
+  /* background-color:var(--color-background); */
 }
 
 
@@ -79,6 +101,18 @@ body {
   display: none;
 }
 
+
+
+.hero__title{
+font-size: var(--ff-h1);
+}
+
+
+
+
+/*=======================================
+       4.  Responsive
+=========================================*/
 
 @media only screen and (max-width:500px) {
   .nav {
