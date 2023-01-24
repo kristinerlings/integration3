@@ -15,22 +15,31 @@
       <div class="nav__container">
         <img class="logo" src="./assets/logo.png">
         <ul class="nav">
-          <li class="nav__item"><a class="nav__link" href="">China</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Germany</a></li>
-          <li class="nav__item"><a class="nav__link" href="">The USA</a></li>
+          <li class="nav__item"><a href="#china">China</a></li>
+          <li class="nav__item"><a href="#germany">Germany</a></li>
+          <li class="nav__item"><a href="#usa">The USA</a></li>
         </ul>
         <img class="hamburger" src="./assets/hamburger.png">
       </div>
-      <div class="hero__container">
-        <h1 class="hero__title">Harmonica</h1>
-        <p>the evolution of</p>
-        <img class="img__harmonica" src="assets/harmonica.png" alt="illustration of harmonica instrument" width="415"
-          height="340">
-        <p>Begin the journey</p>
-      </div>
+      <section class="hero__container">
+        <h2 class="hidden">Learn about the Harmonica</h1>
+          <img class="img__notes-sm" src="assets/sm-notes.png" alt="illustration of music notes" width="32"
+            height="46">
+          <div class="txt__wrp--hero">
+            <h1 class="hero__title">Harmonica</h1>
+            <p>the evolution of</p>
+          </div>
+          <picture>
+            <img class="img__harmonica" sizes="(max-width: 500px) 100vw, 500px" 
+            srcset="
+             assets/harmonica.png,w_300.png 300w,
+             assets/harmonica.png 634w" src="assets/harmonica.png" alt="illustration of a harmonica">
+          </picture>
+          <p>Begin the journey</p>
+      </section>
     </header>
     <section class="china__container">
-      <h2 class="hidden">Section China</h2>
+      <h2 class="hidden" id="china">Section China</h2>
       <div>
         <p>chapter one</p>
         <h2 class="chapter__title">CHINA</h2>
@@ -58,7 +67,7 @@
         </div>
         <img class="" src="" alt="" width="" height="">
       </section>
-    
+
     </section>
     <section class="journey__container">
       <div>
@@ -74,33 +83,35 @@
       <img class="" src="" alt="" width="" height="">
     </section>
     <section class="germany__container--p1">
-          <h2 class="hidden">Section Germany part 1</h2>
+      <h2 class="hidden">Section Germany part 1</h2>
+      <div>
+        <p>chapter two</p>
+        <h2 class="chapter__title">Germany</h2>
+        <h3 class="gradients">1820</h3>
+      </div>
+      {# <img class="img__shadow" src="" alt="" width="" height=""> #}
+      {# <img class="img__revealface" src="" alt="" width="" height=""> #}
+      <section>
+        <h3>From Terpodians <span>to the Aura</span></h3>
+        <h2>The first harmonica</h2>
+        <div>
           <div>
-            <p>chapter two</p>
-            <h2 class="chapter__title">Germany</h2>
-            <h3 class="gradients">1820</h3>
+            <p>Christian Frederich Buschmann, a German instrument maker, was exploring ways to simplify the tuning of
+              pianos,when he
+              created the first harmonica.</p>
           </div>
-          {# <img class="img__shadow" src="" alt="" width="" height=""> #}
-          {# <img class="img__revealface" src="" alt="" width="" height=""> #}
-          <section>
-            <h3>From Terpodians <span>to the Aura</span></h3>
-            <h2>The first harmonica</h2>
-            <div>
-              <div>
-                <p>Christian Frederich Buschmann, a German instrument maker, was exploring ways to simplify the tuning of pianos,when he
-                created the first harmonica.</p>
-              </div>
-              <div>
-                <p>The harmonica was called <span class="bold">the Aura</span>, and was inspired by a small device used for tuning, called Terpodians.</p>
-              </div>
-            </div>
-            <div>
-              <p>Built of 21 metal reeds, the Aura had yet to evolve, as currently it could only play notes when blown.</p>
-            </div>
-            <img class="img__magnify" src="" alt="" width="" height="">
-          </section>
+          <div>
+            <p>The harmonica was called <span class="bold">the Aura</span>, and was inspired by a small device used for
+              tuning, called Terpodians.</p>
+          </div>
+        </div>
+        <div>
+          <p>Built of 21 metal reeds, the Aura had yet to evolve, as currently it could only play notes when blown.</p>
+        </div>
+        <img class="img__magnify" src="" alt="" width="" height="">
+      </section>
     </section>
-    <section class="germany__container--p2">
+    <section class="germany__container--p2" id="germany">
       <h2 class="hidden">Section Germany part 2</h2>
       <div>
         <h3 class="gradients">1825</h3>
@@ -110,19 +121,22 @@
         <h2>The Modern Harmonica</h2>
         <div>
           <div>
-            <p>Joseph Richter introduced the first diatonic harmonica featuring <span class="bold">both blow and draw notes</span> by adding a second set of
-            reeds. This marked a significant turning point in the evolution of the instrument</p>
+            <p>Joseph Richter introduced the first diatonic harmonica featuring <span class="bold">both blow and draw
+                notes</span> by adding a second set of
+              reeds. This marked a significant turning point in the evolution of the instrument</p>
           </div>
           <div>
-            <p>The modern diatonic harmonica, as we know it today, is characterised by its 10 holes and 2 reed plates, each equipped
-            with 10 metal reeds. Depending on where you are located, <span class="bold">the diatonic harmonica can be referred as the blues harp in the
-            West or as the tremolo harmonica in East..</span></p>
+            <p>The modern diatonic harmonica, as we know it today, is characterised by its 10 holes and 2 reed plates,
+              each equipped
+              with 10 metal reeds. Depending on where you are located, <span class="bold">the diatonic harmonica can be
+                referred as the blues harp in the
+                West or as the tremolo harmonica in East..</span></p>
           </div>
         </div>
         <div>
           <p>Built of 21 metal reeds, the Aura had yet to evolve, as currently it could only play notes when blown.</p>
         </div>
-       {#  <canvas></canvas> #}
+        {# <canvas></canvas> #}
       </section>
     </section>
     <section class="hohner__container">
@@ -134,7 +148,7 @@
         <h2>Hohner</h2>
       </section>
     </section>
-    <section class="usa__container">
+    <section class="usa__container" id="usa">
       <h2 class="hidden">Section America</h2>
       <div>
         <p>chapter three</p>
@@ -143,10 +157,12 @@
       <section>
         <h3>Lorem Ipsum</h3>
         <h2>Lorem Ipsum</h2>
-        <div><p></p></div>
-    </section>
-    <section class="mim__container">
-    </section>
+        <div>
+          <p></p>
+        </div>
+      </section>
+      <section class="mim__container">
+      </section>
   </div>
   <script src="grained.min.js"></script>
   <script type="module" src="/main.js"></script>
