@@ -42,6 +42,7 @@ body {
   --fs-xxl: clamp(3.8em, calc(3.8rem + ((1vw - 0.175em) * 3.0244)), 6.9em);
 /*   clamp(4.4rem, calc(4.4rem + ((1vw - 0.25rem) * 2.6316)), 6.9rem); */
 
+  --fspace-00: -0.12rem; 
   --fspace-1: 0.44rem;
   --fspace-2: 0.27rem;
   --fspace-3: 0.14rem;
@@ -146,6 +147,7 @@ font-size: var(--fs-xxl);
 font-family:var(--ff-h1);
 padding-block-start: .3rem; 
 border-bottom:.1rem solid var(--color-gold);
+
 }
 
 .txt__wrp--hero p:nth-of-type(1) {
@@ -169,6 +171,13 @@ font-weight: var(--fw-extralight);
   background-image: var(--color-goldfont);
   color: var(--color-gold);
   /* fallback in case clip and text fill color won't work  */
+}
+
+.begin{
+  color:var(--color-white);
+  font-family: var(--ff-h3); 
+  font-weight: var(--fw-extralight);
+  letter-spacing: var(--fspace-3);
 }
 
 
@@ -210,8 +219,16 @@ font-weight: var(--fw-extralight);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block-start: 6rem;
+    padding-block-start: 4rem;
+    height:100vh;
   }
 
+  .begin{
+    display:none; 
+  }
 
+  .img__arrows{
+    margin-block-start: .45rem; 
+    padding-bottom:6rem;
+  }
 }
