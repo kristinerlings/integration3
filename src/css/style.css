@@ -18,7 +18,7 @@
 
 html,
 body {
-  height: 100vh;
+/*   height: 100vh; */
   width: 100vw; 
   background-color: var(--color-background);
 }
@@ -94,7 +94,6 @@ p -> Montserrat extra light, 1,56rem,
 }
 .bg__grained {
   width: 100vw;
-  height: 100vh;
   position: relative;
   overflow: hidden;
   /* background-color:var(--color-background); */
