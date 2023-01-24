@@ -25,17 +25,36 @@ body {
 :root {
   --color-background: #1E1A19;
   --color-gold: #E3C371;
-  --fs-sm: 1rem;
-  --fs-m: 1.25rem;
-  --fs-l: 1.5rem;
-  --fs-xl: 3rem;
-  --fs-xxl: 5rem;
+  --color-white: #D9D9D9;
+  --color-goldfont: linear-gradient(180deg,
+      rgba(251, 213, 122, 1) 27%,
+      rgba(242, 205, 137, 1) 47%,
+      rgba(250, 215, 125, 1) 57%,
+      rgba(92, 74, 44, 1) 88%);
 
 
-  --ff-h1: quiche-sans,helvetica, sans-serif;
-  --ff-h2: fino-sans, helvetica, sans-serif;
+
+  --fs-sm: 1.125rem;
+  --fs-m: clamp(1.25rem, calc(1.25rem + ((1vw - 0.175rem) * 0.5366)), 1.8rem);
+  --fs-l: 1.8rem;
+  --fs-xl: 3.5rem;
+  --fs-xxl: clamp(3.8em, calc(3.8rem + ((1vw - 0.175em) * 3.0244)), 6.9em);
+/*   clamp(4.4rem, calc(4.4rem + ((1vw - 0.25rem) * 2.6316)), 6.9rem); */
+
+  --fspace-1: 0.44rem;
+  --fspace-2: 0.27rem;
+  --fspace-3: 0.14rem;
+
+  --ff-h2: quiche-sans,helvetica, sans-serif;
+  --ff-h1: fino-sans, helvetica, sans-serif;
   --ff-h3: Helvetica, Arial, sans-serif;
   --ff-p: montserrat, helvetica, sans-serif;
+
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600; 
+  --fw-bold: 700;
 
   --f-line-height: 1.15;
 
@@ -48,9 +67,22 @@ body {
 
 /*=======================================
        2. Typography
-=========================================
-*/
+=========================================*/
 
+/*
+h1 -> Fino-Sans, 4.4rem
+h2-> Quiche Sans, 3.5rem
+
+h3-> Helvetica light, 1.875rem, letterspace: 44% (abv.gold)
+h3->Helvetica regular, 1.875rem,letterspace: 14% (wh.container)
+
+
+
+p -> Montserrat regular, 1.125rem, 
+p -> Montserrat extra light, 1,56rem,
+
+
+*/
 
 
 /*=======================================
@@ -78,7 +110,6 @@ body {
 
 .logo {
   width: 1.65rem;
-  object-fit: contain;
 }
 
 .nav {
@@ -104,7 +135,24 @@ body {
 
 
 .hero__title{
-font-size: var(--ff-h1);
+font-size: var(--fs-xxl);
+font-family:var(--ff-h1);
+}
+
+.hero__title, .chapter__title, .gradients{
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: var(--color-goldfont);
+color: var(--color-gold); /* fallback in case clip and text fill color won't work  */
+}
+
+
+.hero__container p:nth-of-type(1) {
+font-size: var(--fs-m);
+font-family: var(--ff-h3);
+letter-spacing: var(--fspace-1);
+color: var(--color-white);
+font-weight: var(--fw-light);
 }
 
 
