@@ -4,8 +4,6 @@ import './src/css/style.css';
 /*Source: Grained bg>  https://github.com/sarathsaleem/grained
  * Grain generator:  http://sarathsaleem.github.io/grained/ */
 
-
-
 const init = () => {
   const noiseOptions = {
     animate: true,

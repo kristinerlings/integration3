@@ -58,7 +58,7 @@ body {
   --fw-semibold: 600; 
   --fw-bold: 700;
 
-  --f-line-height: 1.15;
+  --f-line-height: 1.75;
 
 
 
@@ -70,21 +70,6 @@ body {
 /*=======================================
        2. Typography
 =========================================*/
-
-/*
-h1 -> Fino-Sans, 4.4rem
-h2-> Quiche Sans, 3.5rem
-
-h3-> Helvetica light, 1.875rem, letterspace: 44% (abv.gold)
-h3->Helvetica regular, 1.875rem,letterspace: 14% (wh.container)
-
-
-
-p -> Montserrat regular, 1.125rem, 
-p -> Montserrat extra light, 1,56rem,
-
-
-*/
 
 
 /*=======================================
@@ -150,7 +135,6 @@ p -> Montserrat extra light, 1,56rem,
 font-size: clamp(4.4rem, calc(4.4rem + ((1vw - 0.125rem) * 4.9767)), 9.75rem);
 font-family:var(--ff-h1);
 padding-block-start: .3rem; 
-border-bottom:.1rem solid var(--color-gold);
 z-index: 2;
 }
 
@@ -210,9 +194,6 @@ font-weight: var(--fw-extralight);
    /* left:12rem; */
  }
 
-/* .img__light-right{
- position: fixed;
-} */
 
 
 
@@ -243,6 +224,11 @@ font-weight: var(--fw-extralight);
 
 /* CHAPTER 1 */
 
+.about{
+  background-image: url('./../../assets/bg-paper.png');
+  padding:2rem; 
+}
+
 .txt-wrp-title >h3{
   font-size: clamp(1.0625rem, calc(1.0625rem + ((1vw - 0.1875rem) * 0.8025)), 1.875rem);
   font-family: var(--ff-h3);
@@ -256,6 +242,7 @@ font-weight: var(--fw-extralight);
   font-family: var(--ff-h2);
   font-weight: var(--fw-bold);
 }
+
 
 
 
@@ -290,6 +277,12 @@ font-weight: var(--fw-extralight);
     transform: rotate(-20deg);
   }
 
+  p {
+    font-size: 1rem;
+    line-height: var(--f-line-height);
+    font-family: var(--ff-p);
+  }
+
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -297,6 +290,10 @@ font-weight: var(--fw-extralight);
     align-items: center;
     padding-block-start: 4rem;
     height:100vh;
+  }
+
+  .hero__title{
+    border-bottom: .1rem solid var(--color-gold);
   }
 
   .begin{
@@ -352,7 +349,12 @@ font-weight: var(--fw-extralight);
     margin-block-end: 1rem;
   }
 
+  
 
 
+
+}
+
+@media only screen and (max-width:780px) {
 
 }
