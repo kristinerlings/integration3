@@ -460,12 +460,12 @@ font-weight: var(--fw-extralight);
   .img__sheng-m{
     display: flex;
     justify-content: center;
-    margin-block-start: .5rem;
+    margin: .8rem;
   }
 
 
 
-   /*=====================Journe-RES=====================*/
+   /*=====================Journey-RES=====================*/
 
   .fromto{
     margin: 2rem 0rem; 
