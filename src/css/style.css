@@ -75,9 +75,21 @@ body {
 /*=======================================
        3.  Layout
 =========================================*/
-.hidden{
+
+
+/*Hidden properties*/
+.hidden, .img__china-tm{
   display:none;
 }
+
+.line{
+  background-color:var(--color-gold);
+  height: .1rem;
+  margin:.4rem 0rem;
+}
+
+
+
 .bg__grained {
   width: 100vw;
   position: relative;
@@ -226,7 +238,8 @@ font-weight: var(--fw-extralight);
 
 .about{
   background-image: url('./../../assets/bg-paper.png');
-  padding:2rem; 
+  padding:2rem 1rem; 
+  display:grid; 
 }
 
 .txt-wrp-title >h3{
@@ -324,10 +337,10 @@ font-weight: var(--fw-extralight);
   }
 
   /*sections*/
-  .china__container, .germany__container--p1, .germany__container--p2,.hohner__container, .usa__container, .journey__container{
+/*   .china__container, .germany__container--p1, .germany__container--p2,.hohner__container, .usa__container, .journey__container{
    padding: 0rem 1rem;
   }
-
+ */
   /*CHINA*/
 
   .txt-wrp-title{
@@ -336,21 +349,41 @@ font-weight: var(--fw-extralight);
     align-items: flex-end;
   }
   .txt-wrp-title>h2, .txt-wrp-title>h3 {
-    width:50%;
+    width: 110%;
     text-align: end;
   }
   
   .txt-wrp-title>h3{
     margin-block-end:.5rem;
+    padding-block-start: 5rem; 
   }
 
   .txt-wrp-title>h2{
-    line-height:1.8rem;
-    margin-block-end: 1rem;
+  line-height:1.8rem;
+  margin-block-end: 2rem;
   }
 
-  
+  .about{
+    grid-template-columns: 1fr 1fr;
+    border:.1rem solid var(--color-gold);
+  }
 
+
+  .img__china-tm {
+    display: block;
+    position: absolute;
+    grid-column: 1/2;
+    margin-inline-start: -3rem; 
+  
+  }
+
+  .txt-wrp-title{
+    grid-column: 2/3;
+  }
+
+  .content{
+    grid-column: 1/3;
+  }
 
 
 }
