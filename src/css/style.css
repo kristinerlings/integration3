@@ -78,7 +78,7 @@ body {
 
 
 /*Hidden properties*/
-.hidden, .img__china-tm, .img__china-tm-2{
+.hidden, .img__china-tm, .img__china-tm-2, .img__bamboo-m{
   display:none;
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 
-/* Header and navigation*/
+/*===================== Header and navigation=====================*/
 .nav__container {
   position: relative;
   padding: .6rem 1.25rem;
@@ -135,7 +135,7 @@ body {
 
 
 
-/*HERO CONTAINER*/
+/*=====================HERO CONTAINER=====================*/
 .img__notes-sm{
   position:relative; 
   margin: 0rem 16rem 2rem 0rem; 
@@ -150,7 +150,7 @@ padding-block-start: .3rem;
 z-index: 2;
 }
 
-.txt__wrp--hero p:nth-of-type(1) {
+.txt__wrp--hero p:nth-of-type(1), .fromto {
 font-size: var(--fs-m);
 font-family: var(--ff-h3);
 letter-spacing: var(--fspace-1);
@@ -209,7 +209,7 @@ font-weight: var(--fw-extralight);
 
 
 
-/* INTRO */
+/*===================== INTRO =====================*/
 
 .intro{
  height:100vh; 
@@ -234,7 +234,7 @@ font-weight: var(--fw-extralight);
   letter-spacing: var(--fspace-0);
 }
 
-/* CHAPTER 1 */
+/*=====================CHAPTER 1===================== */
 
 .about{
   background-image: url('./../../assets/bg-paper.png');
@@ -262,11 +262,31 @@ font-weight: var(--fw-extralight);
 
 
 
+/*=================== The Journey =====================*/
+.journey__container{
+  padding:1rem;
+}
+
+
+.sizeup{
+  font-size: clamp(1.75rem, calc(1.75rem + ((1vw - 0.1875rem) * 3.2099)), 5rem);
+}
+
+.txt--journey{
+  color:var(--color-gold);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+
+
 
 /*=======================================
        4.  Responsive
 =========================================*/
 
+
+/*mobile*/
 @media only screen and (max-width:500px) {
   .nav {
     display: none;
@@ -331,7 +351,7 @@ font-weight: var(--fw-extralight);
     top:12rem;
   }
 
- /*INTRO*/
+ /*=====================INTRO=====================*/
   .intro{
     height: 80vh;
   }
@@ -340,15 +360,8 @@ font-weight: var(--fw-extralight);
    margin-block-end: 2rem; 
   }
 
-  /*sections*/
-/*   .china__container, .germany__container--p1, .germany__container--p2,.hohner__container, .usa__container, .journey__container{
-   padding: 0rem 1rem;
-  }
- */
-
-
  
-  /*CHINA*/
+  /*=====================CHINA=====================*/
 
   .txt-wrp-title{
     display: flex;
@@ -367,7 +380,7 @@ font-weight: var(--fw-extralight);
 
   .txt-wrp-title>h2{
   line-height:1.8rem;
-  margin-block-end: 1rem;
+  margin-block-end: .3rem;
   }
 
   .about{
@@ -375,16 +388,26 @@ font-weight: var(--fw-extralight);
     border:.1rem solid var(--color-gold);
   }
 
-
+  /*img china*/
+  .img__china-tm, .img__china-tm-2, .img__bamboo-m{
+    display:block;
+  }
   .img__china-tm {
-    display: block;
     position: absolute;
     grid-column: 1/2;
     margin-inline-start: -3rem; 
   }
   .img__china-tm-2{
-    display:block;
-    margin-inline-start:2rem;
+    /* margin-inline-start:2rem; */
+    display:flex;
+    justify-content: center;
+  }
+
+  .img__bamboo-m{
+   /*  margin-inline-start: 7rem; */
+    margin-block-start: -1rem; 
+    display: flex;
+    justify-content: flex-end;
   }
 
   .txt-wrp-title{
@@ -395,10 +418,27 @@ font-weight: var(--fw-extralight);
     grid-column: 1/3;
   }
 
+  .img__sheng{
+    display: flex;
+    justify-content: center;
+  }
+
+   /*=====================Journey=====================*/
+
+  .fromto{
+    margin: 2rem 0rem; 
+  }
+  .fromto p:nth-child(2){
+    margin-inline-start:4rem;
+  }
 
 
 
 }
+
+
+
+/*Tablet*/
 
 @media only screen and (max-width:780px) {
 
