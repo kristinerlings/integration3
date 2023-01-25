@@ -76,6 +76,13 @@ body {
        3.  Layout
 =========================================*/
 
+.bg__grained {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  /* background-color:var(--color-background); */
+}
+
 
 /*Hidden properties*/
 .hidden, .img__china-tm, .img__china-tm-2, .img__bamboo-m{
@@ -88,14 +95,13 @@ body {
   margin:.4rem 0rem;
 }
 
-
-
-.bg__grained {
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  /* background-color:var(--color-background); */
+.bold{
+  font-weight:var(--fw-bold);
 }
+.semibold{
+  font-weight:var(--fw-semibold);
+}
+
 
 
 /*===================== Header and navigation=====================*/
@@ -274,9 +280,17 @@ font-weight: var(--fw-extralight);
 
 .txt--journey{
   color:var(--color-gold);
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
+
+.img__light--off{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 
 
 
@@ -350,6 +364,7 @@ font-weight: var(--fw-extralight);
   .img__light-right{
     top:12rem;
   }
+
 
  /*=====================INTRO=====================*/
   .intro{
@@ -432,7 +447,67 @@ font-weight: var(--fw-extralight);
     margin-inline-start:4rem;
   }
 
+  .img__footstep{
+    width: 45px;
+    height: 55px; 
+  }
 
+
+  .txt--journey > .txt-wrap{
+    width:100%;
+  }
+  /*text position*/
+  .txt--journey>.txt-wrap:nth-child(1){
+    grid-column:1/3;
+    grid-row: 1/2; 
+  }
+
+  .txt--journey>.txt-wrap:nth-child(4){
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+
+  .txt--journey>.txt-wrap:nth-child(7) {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    margin-inline-start: 10%;
+    margin-block-start: 1rem; 
+  }
+
+
+
+  /*footstep position*/
+  .txt--journey>.img__footstep:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    transform: rotate(-90deg);
+    margin-block-start: -3rem;
+  }
+
+  .txt--journey>.img__footstep:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3; 
+    transform: rotate(-70deg);
+    margin-inline-start: 4rem; 
+  }
+  /*steps-pair-p2*/
+  .txt--journey>.img__footstep:nth-child(5) {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    transform: rotate(-15deg);
+    
+  }    
+  .txt--journey>.img__footstep:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin-inline-start: 4rem;
+    margin-block-start:4rem; 
+    transform: rotate(10deg);
+  }
+
+  .img__light--off{
+    margin-block-start: -2rem; 
+  }
 
 }
 
