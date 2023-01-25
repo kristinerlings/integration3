@@ -5,7 +5,7 @@ import './src/css/style.css';
  * Grain generator:  http://sarathsaleem.github.io/grained/ */
 
 const init = () => {
-  const noiseOptions = {
+  /* const noiseOptions = {
     animate: true,
     patternWidth: 150.48,
     patternHeight: 150.48,
@@ -13,9 +13,9 @@ const init = () => {
     grainDensity: 1.6,
     grainWidth: 1.2,
     grainHeight: 1,
-  };
+  }; */
   /* 
   const $noise = document.querySelector('.bg__grained');  -  they do it themselves...*/
-  grained('#grained', noiseOptions);
+ // grained('#grained', noiseOptions);
 };
 init();

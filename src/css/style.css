@@ -36,14 +36,14 @@ body {
 
 
   --fs-sm: 1.125rem;
-  --fs-m: clamp(1.25rem, calc(1.25rem + ((1vw - 0.175rem) * 0.5366)), 1.8rem);
+  --fs-m: clamp(1.25rem, calc(1.25rem + ((1vw - 0.1875rem) * 0.7895)), 1.8125rem);
   --fs-l: 1.8rem;
   --fs-xl: 3.5rem;
   --fs-xxl: clamp(3.8em, calc(3.8rem + ((1vw - 0.175em) * 3.0244)), 6.9em);
 /*   clamp(4.4rem, calc(4.4rem + ((1vw - 0.25rem) * 2.6316)), 6.9rem); */
 
   --fspace-00: -0.12rem; 
-  --fspace-1: 0.44rem;
+  --fspace-1: 0.80rem;
   --fspace-2: 0.27rem;
   --fspace-3: 0.14rem;
 
@@ -76,12 +76,11 @@ body {
        3.  Layout
 =========================================*/
 
-.bg__grained {
+ .bg__grained {
   width: 100vw;
   position: relative;
   overflow: hidden;
-  /* background-color:var(--color-background); */
-}
+}  
 
 
 /*Hidden properties*/
@@ -156,13 +155,12 @@ padding-block-start: .3rem;
 z-index: 2;
 }
 
-.txt__wrp--hero p:nth-of-type(1), .fromto {
+.txt__wrp--hero p:nth-of-type(1) {
 font-size: var(--fs-m);
 font-family: var(--ff-h3);
 letter-spacing: var(--fspace-1);
 color: var(--color-white);
 font-weight: var(--fw-extralight);
-
 }
 
 .txt__wrp--hero{
@@ -199,6 +197,7 @@ font-weight: var(--fw-extralight);
 .img__light-left, .img__light-right{
   position:absolute;
   z-index:1;
+
  /*  overflow:hidden;  */
 }
 
@@ -218,7 +217,7 @@ font-weight: var(--fw-extralight);
 /*===================== INTRO =====================*/
 
 .intro{
- height:100vh; 
+  height:100vh;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -228,9 +227,10 @@ font-weight: var(--fw-extralight);
 .intro>p {
   font-size:var(--fs-m);
   font-family: var(--ff-h3); 
-  letter-spacing: var(--fspace-2);
+  letter-spacing: var(--fspace-1);
   font-weight: var(--fw-extralight);
   color:var(--color-white);
+  margin-block-end: .7rem; 
 }
 
 .intro>h2{
@@ -238,6 +238,11 @@ font-weight: var(--fw-extralight);
     min-height: 0vw;
   font-family: var(--ff-h1);
   letter-spacing: var(--fspace-0);
+}
+
+.year {
+  font-size: clamp(1.875rem, calc(1.875rem + ((1vw - 0.1875rem) * 1.8519)), 3.75rem);
+  font-family: var(--ff-h1);
 }
 
 /*=====================CHAPTER 1===================== */
@@ -366,9 +371,9 @@ font-weight: var(--fw-extralight);
   }
 
 
- /*=====================INTRO=====================*/
+ /*=====================INTRO-RES=====================*/
   .intro{
-    height: 80vh;
+    height: 50vh;
   }
 
   .intro>p{
@@ -376,7 +381,7 @@ font-weight: var(--fw-extralight);
   }
 
  
-  /*=====================CHINA=====================*/
+  /*=====================CHINA-RES=====================*/
 
   .txt-wrp-title{
     display: flex;
@@ -438,13 +443,19 @@ font-weight: var(--fw-extralight);
     justify-content: center;
   }
 
-   /*=====================Journey=====================*/
+   /*=====================Journe-RES=====================*/
 
   .fromto{
     margin: 2rem 0rem; 
+    font-size: var(--fs-m);
+    font-family: var(--ff-h3);
+    letter-spacing: 0.44rem;
+    color: var(--color-white);
+    font-weight: var(--fw-extralight);
   }
   .fromto p:nth-child(2){
     margin-inline-start:4rem;
+    margin-block-end: 2rem;
   }
 
   .img__footstep{
@@ -465,6 +476,7 @@ font-weight: var(--fw-extralight);
   .txt--journey>.txt-wrap:nth-child(4){
     grid-column: 2/4;
     grid-row: 3/4;
+    margin-block-start: -2rem;
   }
 
   .txt--journey>.txt-wrap:nth-child(7) {
