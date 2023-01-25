@@ -245,6 +245,18 @@ font-weight: var(--fw-extralight);
   font-family: var(--ff-h1);
 }
 
+.img__intrlight--left, .img__intrlight--right{
+  position: absolute;
+} 
+
+.img__intrlight--right{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
 /*=====================CHAPTER 1===================== */
 
 .about{
