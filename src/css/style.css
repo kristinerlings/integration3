@@ -146,6 +146,10 @@ p {
 
 
 /*=====================HERO CONTAINER=====================*/
+.img__buildings{
+  display:none; 
+}
+
 .img__notes-sm{
   position:relative; 
   margin: 0rem 16rem 2rem 0rem; 
@@ -661,6 +665,17 @@ z-index:3;
 
 /*Tablet*/
 
-@media only screen and (max-width:780px) {
+@media only screen and (min-width:501px) {
+  .img__buildings{
+    display:block;
+    position: absolute;
+    z-index:2;
+  /*   margin-top: calc(-20%); */
+    /* top: 50%; */
+    transform: translateY(-20%);  
+  }
+
+
+
 
 }
