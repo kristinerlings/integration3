@@ -145,7 +145,7 @@ p {
 
 
 
-/*=====================HERO CONTAINER=====================*/
+/*=====================HERO N CONTAINER=====================*/
 .img__buildings{
   display:none; 
 }
@@ -156,7 +156,7 @@ p {
 
 .img__notes-sm{
   position:relative; 
-  margin: 0rem 16rem 2rem 0rem; 
+  margin:.5rem 16rem 2rem 0rem; 
   z-index: 2;
 }
 
@@ -227,7 +227,7 @@ font-weight: var(--fw-extralight);
 
 
 
-/*===================== INTRO =====================*/
+/*===================== INTRO N =====================*/
 
 .intro{
   height:100vh;
@@ -275,7 +275,7 @@ font-weight: var(--fw-extralight);
 }
 
 
-/*=====================CHAPTER 1===================== */
+/*=====================CHINA N===================== */
 
 .about{
   background-image: url('./../../assets/bg-paper.png');
@@ -301,9 +301,12 @@ font-weight: var(--fw-extralight);
   margin: .5rem 0rem;
 }
 
+.img__sheng, .img__china{
+  display:none;
+}
 
 
-/*=================== The Journey =====================*/
+/*=================== The Journey N =====================*/
 .journey__container{
   padding:1rem;
 }
@@ -320,14 +323,18 @@ font-weight: var(--fw-extralight);
   grid-template-rows: repeat(4, 1fr);
 }
 
-.img__light--off{
+.img__light--off, .img__light--on{
   display: flex;
   justify-content: flex-end;
 }
 
+.img__light--on{
+  display:none;
+}
 
 
-/*=================== Germany p1 =====================*/
+
+/*=================== Germany p1 N =====================*/
 
 .img__shadow--m, .img__shadow{
   display:none;
@@ -368,7 +375,7 @@ z-index:3;
 }
 
 
-/*=================== Germany p2 =====================*/
+/*=================== Germany p2 N =====================*/
  .cnt__germany--p2 {
    max-width: 100vw;
  }
@@ -377,11 +384,8 @@ z-index:3;
   padding: 1rem .5rem 2rem;
  }
 
-.img__harmonica > img{
-  padding-block-end: 2rem;
-}
-
-.img__harmonica{
+.img__harmonica--layers{
+  margin: 0 auto; 
   z-index: 3;
   position: relative;
 }
@@ -396,7 +400,7 @@ z-index:3;
 
 
 
-@media only screen and (min-width:200px) and (max-width: 500px) {
+@media only screen and (min-width:200px) and (max-width: 800px) {
   .nav {
     display: none;
     transition: 1s ease-in-out;
@@ -457,7 +461,7 @@ z-index:3;
   p {
     font-size: 1rem;
   }
- /*=====================INTRO-RES=====================*/
+ /*=====================INTRO-RES-1=====================*/
   .intro{
     height: 50vh;
   }
@@ -467,7 +471,7 @@ z-index:3;
   }
 
  
-  /*=====================CHINA-RES=====================*/
+  /*=====================CHINA-RES-1=====================*/
 
   .txt-wrp-title{
     display: flex;
@@ -535,7 +539,7 @@ z-index:3;
 
 
 
-   /*=====================Journey-RES=====================*/
+   /*=====================Journey-RES-1=====================*/
 
   .fromto{
     margin: 2rem 0rem; 
@@ -608,12 +612,12 @@ z-index:3;
     transform: rotate(10deg);
   }
 
-  .img__light--off{
+  .img__light--off, .img__light--on{
     margin-block-start: -2rem; 
   }
 
 
-  /*=====================Germany-RES=====================*/
+  /*=====================Germany-RES-1=====================*/
   
   .germany__container--p1 .intro{
     height: 70%;
@@ -643,16 +647,19 @@ z-index:3;
     height:100%;
   }
 
-
-
-  .img__harmonica {
-   margin: 1rem auto;
-   padding: 1rem;
+  .img__harmonica--layers img {
+    width: 90%;
   }
+
+  .title__germany--p2{
+    width:60vw;
+  }
+  
 }
 
+
 /*adjust small screen*/
-@media only screen and (min-width:420px) and (max-width: 500px) {
+@media only screen and (min-width:420px) and (max-width: 458px) {
   /*China*/
   .txt-wrp-title>h2,
   .txt-wrp-title>h3 {
@@ -666,12 +673,85 @@ z-index:3;
    margin: 0 auto;
   }
 
+ 
   .img__china-tm{
     margin-inline-start:1rem;
   }
 } 
 
 
+/*----- Res-2 ----*/
+@media only screen and (min-width: 459px){
+
+  .about p {
+      width: 70%;
+      margin: 2rem auto;
+    }
+  .title__china{
+    margin-inline-end: 2rem; 
+  }
+   
+  .img__china-tm, .img__china-tm-2, .img__bamboo-m, .img__sheng-m {
+    display:none;
+  }
+
+  .img__sheng, .img__china{
+    display:inline;
+  }
+    
+  .img__china img {
+    width: 40vw;
+  }
+
+  .txt-wrp-title h2{
+    line-height: 2.5rem;
+    width:80%;
+  }
+
+  /*JOURNEY-RES-2*/
+  .fromto{
+    padding: 1rem 0rem 0.5rem 1rem; 
+  }
+
+  .txt--journey{
+   padding: 0rem 4rem;
+  }
+  
+  .img__light--off, .img__light--on{
+    padding-inline-end: 2rem; 
+  }
+  
+
+  /*MODERN-RES-2**/
+  .cnt__germany--p2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+/*   .img__harmonica--layers {
+    margin-block-end: -3rem;
+  } */
+
+  
+  }
+
+/* @media only screen and (min-width:501px){
+  .cnt__china{
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .img__bamboo-m, .img__sheng{
+    display: none;
+  }
+
+  .cnt__china div{
+    grid-column: 1/2;
+  }
+  .img__sheng-m{
+    grid-column: 2/3;
+  }
+}
+ */
 
 
 /*B*/
@@ -686,6 +766,7 @@ z-index:3;
     grid-column: 3/4;
     grid-row: 2/3;
   }
+
 
   .img__light-right{
     z-index:1;
@@ -741,6 +822,10 @@ z-index:3;
   .arrows__begin{
     justify-content: flex-end;
   }
+
+     /*=====================SHENG-RES-m=====================*/
+  
+ 
 
 
 }
