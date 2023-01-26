@@ -102,7 +102,11 @@ body {
   font-weight:var(--fw-semibold);
 }
 
-
+p {
+  font-size: 1.125rem;
+  line-height: var(--f-line-height);
+  font-family: var(--ff-p);
+  }
 
 /*===================== Header and navigation=====================*/
 .nav__container {
@@ -320,10 +324,16 @@ font-weight: var(--fw-extralight);
 .img__shadow--m, .img__shadow{
   display:none;
   z-index:1;
-  /* position: absolute;
-  justify-content: center;
-  z-index: 1;
-  overflow: hidden; */
+}
+.img__shadowman, .img__shadow--m > img{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.img__shadowman {
+  z-index: 2;
 }
 
 .cnt__germany{
@@ -336,31 +346,19 @@ font-weight: var(--fw-extralight);
 
 
 .cnt__germany div:has(p){
- z-index:3;
+ z-index:4;
  position:relative;
- padding: 0rem 0.5rem;
+ padding: .3rem 0.5rem;
  margin-block-start: 1rem;
-
-
 }
 
 .about__germany .txt-wrp-title{
-  color:var(--color-);
+  color:var(--color-white);
   margin-block-end: 4rem; 
   position:relative;
   z-index:3;
 }
 
-
- .img__shadowman {
-  z-index: 2;
- }
-.img__shadow--m > img{
-    position: absolute;
-      left: 50%;
-      right: 50%;
-      transform: translateX(-50%);
-}
 
 /*=======================================
        4.  Meida Queries / Responsive
@@ -398,12 +396,6 @@ font-weight: var(--fw-extralight);
     transform: rotate(-20deg);
   }
 
-  p {
-    font-size: 1rem;
-    line-height: var(--f-line-height);
-    font-family: var(--ff-p);
-  }
-
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -435,7 +427,9 @@ font-weight: var(--fw-extralight);
     top:12rem;
   }
 
-
+  p {
+    font-size: 1rem;
+  }
  /*=====================INTRO-RES=====================*/
   .intro{
     height: 50vh;
@@ -618,6 +612,10 @@ font-weight: var(--fw-extralight);
     margin-top: -5rem; 
   }
   
+  .cnt__germany div{
+    height:100%;
+    background-color: red;
+  }
 }
 
 
