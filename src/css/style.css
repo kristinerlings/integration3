@@ -235,7 +235,7 @@ font-weight: var(--fw-extralight);
   letter-spacing: var(--fspace-1);
   font-weight: var(--fw-extralight);
   color:var(--color-white);
-  margin-block-end: .7rem; 
+  margin-block-end: .2rem; 
 }
 
 .intro>h2{
@@ -289,7 +289,7 @@ font-weight: var(--fw-extralight);
   font-weight: var(--fw-bold);
 }
 
-.cnt__china div, .cnt__germany div {
+.cnt__china div, .cnt__germany div, .cnt__germany--p2{
   margin: .5rem 0rem;
 }
 
@@ -353,10 +353,24 @@ font-weight: var(--fw-extralight);
 }
 
 .about__germany .txt-wrp-title{
-  color:var(--color-white);
-  margin-block-end: 4rem; 
-  position:relative;
-  z-index:3;
+color:var(--color-white);
+margin-block-end: 4rem; 
+position:relative;
+z-index:3;
+}
+
+
+/*=================== Germany p2 =====================*/
+ .cnt__germany--p2 {
+   max-width: 100vw;
+ }
+
+ .cnt__germany--p2 div:has(p){
+  padding: 1rem .5rem 2rem;
+ }
+
+.img__harmonica > img{
+  padding-block-end: 2rem;
 }
 
 
@@ -369,7 +383,7 @@ font-weight: var(--fw-extralight);
 
 
 
-@media only screen and (max-width:500px) {
+@media only screen and (min-width:200px) and (max-width: 500px) {
   .nav {
     display: none;
     transition: 1s ease-in-out;
@@ -614,10 +628,35 @@ font-weight: var(--fw-extralight);
   
   .cnt__germany div{
     height:100%;
-    background-color: red;
+  }
+
+
+
+  .img__harmonica {
+   margin: 1rem auto;
+   padding: 1rem;
   }
 }
 
+/*adjust small screen*/
+@media only screen and (min-width:420px) and (max-width: 500px) {
+  /*China*/
+  .txt-wrp-title>h2,
+  .txt-wrp-title>h3 {
+      width: 110%;
+      text-align: end;
+      padding-inline-end:1rem;
+    }
+
+  .about p{
+   width:90%; 
+   margin: 0 auto;
+  }
+
+  .img__china-tm{
+    margin-inline-start:1rem;
+  }
+} 
 
 
 /*Tablet*/
