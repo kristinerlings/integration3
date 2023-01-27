@@ -513,6 +513,8 @@ z-index:3;
 }
 
 
+
+
 /*=======================================
        4.  Meida Queries / Responsive
 =========================================*/
@@ -1062,13 +1064,21 @@ z-index:3;
  } 
 
 @media only screen and (min-width:1350px) {
-.txt__wrp--hero {
+  .txt__wrp--hero {
     margin-inline-start: -20em;
   }
 
-.txt-silkroad{
-  padding-inline: 5rem 4rem;
-}
+  .pic__harmonica{
+    margin-inline-end: calc(30%);
+  }  
+ 
+  .img__notes-l {
+    margin-inline-start: -1em;
+  }
+
+  .txt-silkroad{
+    padding-inline: 5rem 4rem;
+  } 
  .txt--journey>.img__footstep:nth-child(2) {
    transform: scaleX(-1) rotate(-10deg);
    margin-block-start: -6rem;
