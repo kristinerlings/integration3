@@ -189,7 +189,7 @@ font-weight: var(--fw-extralight);
 /*GRADIENTS*/
 .hero__title,
 .chapter__title,
-.gradients, .nav__item a {
+.gradients, .nav__item a, .languages {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: var(--color-goldfont);
@@ -573,7 +573,67 @@ z-index:3;
   /*===================== MIM =====================*/
   
   .mim__container{
-    
+    color:var(--color-white);
+    display:grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 20% 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem 2rem;
+  }
+
+  .mim__subtitle, .mim__title, .mim__text, .btn__min{
+   /*  grid-column: 2/3; */
+  }
+
+  .mim__subtitle{
+    color:var(--color-gold);
+    font-size: 2rem;
+  }
+
+  .mim__title{
+    font-size: clamp(1.375rem, calc(1.375rem + ((1vw - 0.1875rem) * 2.3457)), 3.75rem);
+    font-family: var(--ff-h2);
+    font-weight: var(--fw-bold);
+    line-height: 2.5rem;
+  }
+ 
+  /**/
+  
+
+  .mim__text{
+    font-size: var(--fs-sm);
+    margin-block-start:1rem;
+  }
+
+  .btn__mim{
+    padding:1.3rem;
+    width:90%;
+    height:40%;
+    text-decoration: none;
+    border-radius: 3px;
+    background: linear-gradient(180deg,
+        rgba(251, 213, 122, 1) 27%,
+        rgba(250, 215, 125, 1) 50%,
+        rgba(92, 74, 44, 1) 90%);
+    text-align: center;
+    color:rgb(9, 9, 9);
+    grid-row: 4/5;
+    grid-column: 2/3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self:center;
+    font-family: var(--ff-p);
+    letter-spacing: var(--fspace-3);
+    font-weight: var(--fw-semibold);
+  }
+
+  .btn__mim:hover{
+    background-color:rgb(141, 99, 45);
+  }
+
+  .img__mim{
+  /*   grid-column: 3/5;
+    grid-row: 3/5; */
   }
 
 
@@ -1018,7 +1078,54 @@ z-index:3;
 }
 
 
-/* --------- RES-3.5 extra  ------- */
+/* --------- RES-3.1  900 ------- */
+@media only screen and (min-width:900px){
+  .mim__container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 20% 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem 2rem;
+    }
+  
+    .mim__subtitle,
+    .mim__title,
+    .mim__text,
+    .btn__min {
+      grid-column: 2/3;
+    }
+  
+    .mim__subtitle {
+      grid-row: 1/2;
+      display: flex;
+      align-items: flex-end;
+      margin-inline-start: -2em;
+    }
+  
+    .mim__title {
+      grid-row: 2/3;
+    }
+  
+    .main__text {
+      margin-block-start: 1rem;
+      grid-row: 3/4;
+      margin-inline-start: 2em;
+    }
+  
+    .btn__mim {
+      padding: 1.3rem;
+      width: 90%;
+      height: 40%;
+      grid-row: 4/5;
+      grid-column: 2/3;
+    }
+  
+    .img__mim {
+      grid-column: 3/5;
+      grid-row: 3/5;
+    }
+}
+
+/* --------- RES-3.2  ------- */
 @media only screen and (min-width:930px){
 
   /*Hohner -Res-3.5 */
