@@ -461,6 +461,10 @@ position:relative;
 z-index:3;
 }
 
+
+
+
+
 /*moved from mediaquery*/
 
 .germany__container--p1 .intro {
@@ -513,7 +517,10 @@ z-index:3;
 }
 
 
-
+/* ========= Hohner N ========*/
+.img__hohner-l{
+  display:none;
+}
 
 /*=======================================
        4.  Meida Queries / Responsive
@@ -952,29 +959,21 @@ z-index:3;
     line-height: 2.7rem;
   } 
 
-/*  .img__china img {
-   width: 30vw;
-   background-color: yellow;
-   position: relative;
-   bottom: 0;
- } */
-
- /*germany p1*/
- .about__germany .txt-wrp-title{
-/*   display:flex;
-  justify-content: flex-end;
-  text-align: end; */
- }
-
-/*  .about__germany .txt-wrp-title>h3{
-  
- }
- */
-
 
  .cnt__germany div:has(p){
   margin-inline-start: 3rem; 
  }
+
+
+  /*Hohner -Res-3*/
+ .img__hohner-l{
+  display:block;
+ }
+
+ .img__hohner-m{
+  display:none;
+ }
+
 
 }
 
