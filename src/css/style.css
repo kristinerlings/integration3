@@ -501,6 +501,8 @@ z-index:3;
   width: 60vw;
 }
 
+
+
 /*=================== Germany p2 N =====================*/
  .cnt__germany--p2 {
    max-width: 100vw;
@@ -517,10 +519,64 @@ z-index:3;
 }
 
 
-/* ========= Hohner N ========*/
+/* =================== Hohner N =================*/
 .img__hohner-l{
   display:none;
 }
+
+
+.content__hohner{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+}
+.hohner__letter{
+  background-image: url('./../../assets/bg-paper.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .1rem solid var(--color-gold);
+  z-index: 1;
+  max-width: 375px;
+}
+
+.hohner__title{
+  font-size: var(--fs-l);
+  font-family: var(--ff-h2);
+  margin-block: 2rem 1.5rem;
+}
+
+.txt__wrp--hohner{
+  padding: 1rem .8rem;
+}
+
+.img__envelope-l-b, .img__envelope-m-b, .img__envelope-m-t, .img__envelope-l-t{
+  display:flex;
+  justify-content: center;
+}
+
+.img__envelope-l-b, .img__envelope-l-t{
+  display:none;
+}
+.img__envelope-m-t{
+  margin-inline-start: -3rem;
+  
+}
+.img__envelope-m-b{
+  position:absolute;
+  z-index: 2;
+  bottom:-2rem;
+}
+
+
+  /*===================== MIM =====================*/
+  
+  .mim__container{
+    
+  }
+
+
 
 /*=======================================
        4.  Meida Queries / Responsive
@@ -671,11 +727,6 @@ z-index:3;
 
 
    /*=====================Journey-RES-1=====================*/
-
-
-  /*=====================Germany-RES-1=====================*/
-  
-  
 }
 
 
@@ -728,6 +779,8 @@ z-index:3;
     line-height: 2.5rem;
     width:80%;
   }
+
+
 
   /*JOURNEY-RES-2*/
   .fromto{
@@ -896,8 +949,7 @@ z-index:3;
     margin: 12rem 0rem 0rem 12rem;
     transform: rotate(-105deg);
   }
-
-
+  
 
 
 
@@ -963,19 +1015,47 @@ z-index:3;
  .cnt__germany div:has(p){
   margin-inline-start: 3rem; 
  }
-
-
-  /*Hohner -Res-3*/
- .img__hohner-l{
-  display:block;
- }
-
- .img__hohner-m{
-  display:none;
- }
-
-
 }
+
+
+/* --------- RES-3.5 extra  ------- */
+@media only screen and (min-width:930px){
+
+  /*Hohner -Res-3.5 */
+    .img__hohner-l,
+    .img__envelope-l-b,
+    .img__envelope-l-t {
+      display: block;
+    }
+  
+    .img__hohner-m,
+    .img__envelope-m-b,
+    .img__envelope-m-t {
+      display: none;
+    }
+  
+    .hohner__letter {
+      background-image: url('./../../assets/bg-paper.png');
+      max-width: 718px;
+      position: relative;
+      z-index: 2;
+    }
+  
+    .img__envelope-l-t {
+      position: absolute;
+      z-index: 1;
+      bottom: 7rem;
+    }
+  
+    .img__envelope-l-b {
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+  
+    }
+    
+}
+
 
 
 
