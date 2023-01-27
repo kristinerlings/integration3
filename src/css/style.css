@@ -631,15 +631,16 @@ z-index:3;
   }
 
 
+
+
+
 /*=======================================
        4.  Meida Queries / Responsive
 =========================================*/
 
 
-/*mobile*/
 
-
-/* --------- RES-1      200-830 ------- */
+/* --------- RES-1    200-830 ------- */
 @media only screen and (min-width:200px) and (max-width: 830px) {
   .nav {
     display: none;
@@ -702,7 +703,7 @@ z-index:3;
   }
  /*=====================INTRO-RES-1=====================*/
   .intro{
-    height: 50vh;
+    height: 70vh;
   }
 
   .intro>p{
@@ -771,6 +772,15 @@ z-index:3;
     display: flex;
     justify-content: center;
     margin: .8rem;
+  }
+
+
+  /*journey*/
+  .journey__container{
+    padding-block-start: 3rem;
+  }
+  .fromto{
+    padding-block-end: .5rem;
   }
 
   /*MIM*/
@@ -878,7 +888,7 @@ z-index:3;
 
 @media only screen and (min-width: 576px){
   .jounrey__container {
-      width:80%;
+      width:65%;
     }
 }
 
