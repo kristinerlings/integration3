@@ -1,7 +1,7 @@
 const $playSound = document.querySelector('.btn__sound');
 
 const playAudio = () => {
-  const audio = new Audio('assets/audio/245091__neilseggar__g-harmonica.wav');
+  const audio = new Audio('public/audio/245091__neilseggar__g-harmonica.wav');
 
   audio.play();
 };
