@@ -748,6 +748,9 @@ z-index:3;
 /*B*/
 
 @media only screen and (min-width:830px) {
+  .china__container .intro, .container__usa .intro {
+    height: 100vw; 
+  }
 
   .img__notes-sm{
     display: none;
@@ -781,8 +784,6 @@ z-index:3;
    /*  flex-direction: column; */
     justify-content: flex-end;
    /*  margin-top: calc(8%); */
-   
-
   }
 
   .txt__wrp--hero{
@@ -903,8 +904,6 @@ z-index:3;
     padding: .6rem 2rem;
     line-height: 2.7rem;
   } 
-  
-
 
 }
 
