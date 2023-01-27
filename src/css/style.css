@@ -407,6 +407,10 @@ font-weight: var(--fw-extralight);
   transform: rotate(10deg);
 }
 
+.img__footstep-l, .img__footstep-l{
+  display:none; 
+}
+
 .img__light--off,
 .img__light--on {
   margin-block-start: -2rem;
@@ -832,6 +836,27 @@ z-index:3;
     width: 95%;
   }
 
+
+
+
+  /*footstep position -RES3 - pair 1*/
+  .txt--journey>.img__footstep:nth-child(2) {
+    grid-column: 3/4;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1) rotate(-20deg);
+    position: relative;
+    margin-block-start: -6rem;
+    margin-inline-start: 2rem;
+  }
+
+  .txt--journey>.img__footstep:nth-child(3) {
+    grid-column: 3/4;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1) rotate(-80deg);
+    margin-inline-start: 2em;
+  }
+  /*pair2 RES-3*/
+
   .txt--journey>.img__footstep:nth-child(5) {
     grid-column: 2/3;
     grid-row: 3/5;
@@ -844,13 +869,32 @@ z-index:3;
     grid-column: 2/3;
     grid-row: 4/5;
     margin-inline-start: -6vw;
-    transform: rotate(-30deg);
+    transform: rotate(-50deg);
   }
 
   .img__light--off, .img__light--on{
     margin-inline-start: 20%;
     justify-content: center;
   }
+
+  /*pair 3*/
+  .img__footstep-l,.img__footstep-l2{
+    display:block;
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+
+  .img__footstep-l{
+    margin: 5rem 0rem 0rem 8rem;
+    transform: rotate(-80deg);
+  }
+  .img__footstep-l2 {
+    margin: 12rem 0rem 0rem 12rem;
+    transform: rotate(-105deg);
+  }
+
+
+
 
 
   /* ---- white containers ----*/
@@ -913,7 +957,22 @@ z-index:3;
 
 
 
+ /*germany p1*/
+ .about__germany .txt-wrp-title{
+/*   display:flex;
+  justify-content: flex-end;
+  text-align: end; */
+ }
 
+/*  .about__germany .txt-wrp-title>h3{
+  
+ }
+ */
+
+
+ .cnt__germany div:has(p){
+  margin-inline-start: 3rem; 
+ }
 
 }
 
@@ -995,6 +1054,11 @@ z-index:3;
     .arrows__begin {
       justify-content: flex-end;
     } */
+
+    .img__light--off,
+    .img__light--on {
+      margin-inline-start: -.5rem;
+    }
  } 
 
 @media only screen and (min-width:1350px) {
@@ -1005,4 +1069,21 @@ z-index:3;
 .txt-silkroad{
   padding-inline: 5rem 4rem;
 }
+ .txt--journey>.img__footstep:nth-child(2) {
+   transform: scaleX(-1) rotate(-10deg);
+   margin-block-start: -6rem;
+   margin-inline-start: -2rem;
+ }
+
+ .txt--journey>.img__footstep:nth-child(3) {
+   transform: scaleX(-1) rotate(-60deg);
+   margin-inline-start: 1em;
+ }
+
+ .txt--journey>.img__footstep:nth-child(6) {
+   margin-inline-start: -6vw;
+   transform: rotate(-30deg);
+ }
+
+
 }
