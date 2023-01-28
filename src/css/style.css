@@ -495,12 +495,12 @@ z-index:3;
 
 
 /*text*/
-.cnt__germany div:has(p){
+.txt__wrp--germany{
  z-index:5;
  position:relative;
  padding: .3rem 0.5rem;
  margin-block-start: 1rem;
- max-width: 100vw;
+
 }
 
 
@@ -509,7 +509,9 @@ z-index:3;
   position: absolute;
   z-index: 6;
 }
-
+.txt__wrp--magnify{
+  z-index:5;
+}
 
 
 /*moved from mediaquery*/
@@ -542,7 +544,12 @@ z-index:3;
   margin-top: -5rem;
 }
 
-
+.txt__wrp--magnify{
+  font-size: var(--fs-m);
+  color:var(--color-gold);
+  font-weight: var(--fw-semibold);
+  width: 50%;
+}
 
 /*=================== Germany p2 N =====================*/
 
@@ -899,6 +906,9 @@ z-index:3;
   .mim__text{
     max-width: 20rem;
   }
+  .txt__wrp--magnify {
+     width: 80%;
+   }
 }
 
 
@@ -990,6 +1000,10 @@ z-index:3;
 
   .btn__mim{
     margin-left: 1.5rem;
+  }
+
+  .txt__wrp--magnify{
+    width: 50%; 
   }
 
   }
@@ -1220,27 +1234,35 @@ z-index:3;
 
   .about__germany {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 10% 1fr;
     grid-template-columns: 10% 1fr 2fr 1fr;
   } 
+
+
+  .cnt__germany{
+    grid-row: 2/3;
+    display: grid;
+  }
   
-    /*title*/
+    /*title  RES3 831 */
   .about__germany .txt-wrp-title {
     color: var(--color-white);
-    margin-block-end: 4rem;
+    margin-block-end: 10em;
     position: relative;
     z-index: 3;
-     grid-row: 1/2;
+    grid-row: 1/2;
+    
   } 
   
   
     /*text*/
-   .cnt__germany div:has(p) {
+   /* .cnt__germany div:has(p) */ 
+  .txt__wrp--germany{
       z-index: 4;
       position: relative;
       padding: .3rem 0.5rem;
       margin-block-start: 1rem;
-      grid-row: 2/3;
+      grid-row: 1/3;
       margin-inline-start: 15%;
     } 
 
@@ -1254,6 +1276,7 @@ z-index:3;
   }  
     /*Germany - shadow*/
 
+  .
 
   /*All Content containers*/
   .content div:has(p){
@@ -1282,13 +1305,12 @@ z-index:3;
     padding: .6rem 2rem;
     line-height: 2.7rem;
   } 
-
-
   
 
   .mim__text{
     width: 20rem;
   }
+
 }
 
 
