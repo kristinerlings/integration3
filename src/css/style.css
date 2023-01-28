@@ -116,6 +116,10 @@ p {
   }
 
 /*===================== Header and navigation=====================*/
+.header{
+  height: 100vh;
+}
+
 .nav__container {
   position: relative;
   padding: .6rem 1.25rem;
@@ -234,6 +238,27 @@ font-weight: var(--fw-extralight);
 
 
 
+/*===================== INTRODUCTION N =====================*/
+.introduction__container{
+  height: 30vw;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__txt{
+  color: var(--color-white);
+  max-width: 50rem;
+  font-size: clamp(1.0625rem, calc(1.0625rem + ((1vw - 0.1875rem) * 0.8025)), 1.875rem);
+  font-family: var(--ff-h3);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--fspace-3);
+  text-align: center;
+}
+
+
+
 /*===================== INTRO N =====================*/
 
 .intro{
@@ -294,7 +319,6 @@ font-weight: var(--fw-extralight);
   font-size: clamp(1.0625rem, calc(1.0625rem + ((1vw - 0.1875rem) * 0.8025)), 1.875rem);
   font-family: var(--ff-h3);
   font-weight: var(--fw-regular);
-
 }
 
 
@@ -672,6 +696,10 @@ z-index:3;
 
 /* --------- RES-1    200-830 ------- */
 @media only screen and (min-width:200px) and (max-width: 830px) {
+  
+  .header{
+    height: 100%;
+  }
   .nav {
     display: none;
     transition: 1s ease-in-out;
@@ -731,6 +759,16 @@ z-index:3;
   p {
     font-size: 1rem;
   }
+
+
+  /*=====================INTRODUCTION-RES-1=====================*/
+  .introduction__container{
+    margin-block-start: 2rem; 
+    height: 50vh;
+    padding: .1rem;
+  }
+  
+
  /*=====================INTRO-RES-1=====================*/
   .intro{
     height: 70vh;
@@ -943,14 +981,28 @@ z-index:3;
 
 
 @media only screen and (min-width: 576px){
-  .journey__container {
-      width:75%;
-    }
+  
+.introduction__container {
+  margin-block-start: 2rem;
+  height: 100vh;
+  padding: 1rem;
+  }
+
+.intro__txt{
+  max-width:34rem;
+  font-weight: var(--fw-light);
+}
+   
+.journey__container {
+  width:75%;
+}
 
   /*Germany*/
-  .cnt__germany{
-    width: 30rem;
-  }
+.cnt__germany{
+  width: 30rem;
+}
+
+
 }
 
   /*----   RES-3  831 -----*/
@@ -964,6 +1016,11 @@ z-index:3;
     display:flex;
     justify-content: flex-start;
   }
+  
+  .intro__txt{
+  max-width:40rem;
+  } 
+
   
   .china__container .intro, .container__usa .intro {
     height: 100vw; 
@@ -1154,6 +1211,11 @@ z-index:3;
 
 /* --------- RES-3.1  900 ------- */
 @media only screen and (min-width:900px){
+  .intro__txt {
+      max-width: 45rem;
+      font-weight: var(--fw-light);
+    }
+  
   .mim__container {
       display: grid;
       grid-template-columns: 1fr 2fr 2fr 1fr;
