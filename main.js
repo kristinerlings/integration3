@@ -18,6 +18,6 @@ const init = () => {
 
   const $noise =
     document.querySelector('.bg__grained'); /*  -  they do it themselves... */
-  grained('#grained', noiseOptions);
+/*   grained('#grained', noiseOptions); */
 };
 init();
