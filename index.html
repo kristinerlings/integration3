@@ -92,7 +92,7 @@
         </picture>
         <div class="txt-wrp-title title__china">
           <h3>A blast from the past</h3>
-          <h2>Bamboo &amp; Beats <br> <span class="title__sm">the Ancient Treasure</span></h2>
+          <h2>Bamboo &amp; Beats <br> <span class="title__sm">the Old Treasure</span></h2>
         </div>
         <div class="content cnt__china">
           <div>
@@ -107,7 +107,7 @@
               alt="illustration of goddess Nu Wa">
           </picture>
           <div>
-            <p>It is a versatile instrument, and that has been used in many different types of Chinese music, including traditional
+            <p class="hidden">It is a versatile instrument, that has been used in many different types of Chinese music, including traditional
             Chinese opera and folk songs. It was played by the skilled hands of musicians who had trained for years to master its
             intricacies, and it was loved and revered by audiences for its beautiful and otherworldly sound.</p>
           </div>
@@ -116,24 +116,30 @@
           assets/bamboo-mobile.png 223w" src="assets/bamboo-mobile.png" alt="illustrations of bamboo">
           </picture>
           <div>
-            <p>The Sheng is a type of mouth organ that was made up of several bamboo pipes of different lengths, all tied together in a
-            small frame. Each pipe has its own specific pitch, and when the player blows into the mouthpiece, the bamboo pipes would
+            <p class="hidden">The Sheng is a type of mouth organ that was made up of several bamboo pipes of different lengths, all tied together in a
+            small frame. Each pipe has its own specific pitch, and when the player blows into the mouthpiece, the bamboo pipes would
             vibrate and produce a unique and mesmerising sound.</p>
           </div>
-          <picture class="img__china">
-            <img sizes="(max-width: 359px) 100vw, 359px" srcset="
-            assets/china-f.png 359w" src="assets/china-f.png" alt="illustration of Goddess Nu Wa">
-          </picture>
-          <picture class="img__sheng">
-            <img sizes="(max-width: 228px) 100vw, 228px" srcset="
-            assets/china-sheng.png 220w,
-            assets/china-sheng.png 228w" src="assets/china-sheng.png" alt="image of the Sheng">
-          </picture>
           <picture class="img__sheng-m">
             <img sizes="(max-width: 165px) 100vw, 165px" srcset="
             assets/sheng-m.png 165w" src="assets/sheng-m.png" alt="image of the Sheng">
           </picture>
         </div>
+        <picture class="img__china">
+          <img class="img__goddess" sizes="(max-width: 359px) 100vw, 359px" srcset="
+                      assets/china-f.png 200w
+                      assets/china-f.png 359w" src="assets/china-f.png" alt="illustration of Goddess Nu Wa">
+        </picture>
+        <picture class="img__china--human">
+          <img class="img__goddess--human" sizes="(max-width: 359px) 100vw, 359px" srcset="
+                      assets/goddesshuman.png 200w        
+                      assets/goddesshuman.png 359w" src="assets/goddesshuman.png" alt="illustration of Goddess Nu Wa">
+        </picture>
+          <picture class="img__sheng">
+            <img class="hidden" sizes="(max-width: 228px) 100vw, 228px" srcset="
+                      assets/china-sheng.png 220w,
+                      assets/china-sheng.png 228w" src="assets/china-sheng.png" alt="image of the Sheng">
+          </picture>
       </section>
       <div class="line"></div>
     </section>
@@ -191,18 +197,28 @@
       </div>
       <section class="about__germany">
         <div class="txt-wrp-title">
-          <h3>The First Harmonica</h3>
-          <h2>From Tool to Tune</h2>
+          <h3 class="subtitle__about">The First Harmonica</h3>
+          <h2 class="title__about">From Tool to Tune</h2>
         </div>
+
         <div class="content cnt__germany">
           <picture class="img__shadow--m">
             <img sizes="(max-width: 375px) 100vw, 375px" srcset="
                     assets/shadow-m.png 250w,
                     assets/shadow-m.png 375w" src=" assets/shadow-m.png" alt="illustration of a shadow">
           </picture>
+          <picture class="img__shadow--reveal--m">
+            <img sizes="(max-width: 375px) 100vw, 375px" srcset="
+                              assets/revealman-m.png 250w,
+                              assets/revealman-m.png 375w" src="assets/revealman-m.png" alt="illustration of a shadow">
+          </picture>
           <picture class="img__shadow">
             <img sizes="(max-width: 375px) 100vw, 375px" srcset="
                     assets/shadow.png 375w" src="assets/shadow.png" alt="illustration of a shadow">
+          </picture>
+          <picture class="img__shadow--reveal">
+            <img sizes="(max-width: 375px) 100vw, 375px" srcset="
+                              assets/revealman.png 375w" src="assets/revealman.png" alt="illustration of a shadow">
           </picture>
           <img class="img__shadowman" src="assets/shadowman.png" alt="man in the shadow illustration" width="31"
             height="82">
@@ -212,14 +228,16 @@
             called a Terpodian and could only play notes when blown into. However, this was just the beginning for the harmonica, as
             the Aura had yet to evolve.</p>
           </div>
-          <div class="magnify__container">
-            <div class="txt__wrp--magnify">
-              <p>Use the magnifying glass to reveal Mr.Buschmann.</p>
-            </div>
-          </div>
-        </div>
-        <img class="img__magnify" src="" alt="" width="" height="">
+          <img class="img__magnify" sizes="(max-width: 797px) 100vw, 797px" srcset="
+                /assets/magnify.png 190w,
+                /assets/magnify.png 797w" src="/assets/magnify.png" alt="illustration of a magnify glass">
       </section>
+        </div>
+        <div class="txt__wrp--magnify">
+          <p>Use the magnifying glass to reveal Mr.Buschmann.</p>
+        </div>
+
+        
     </section>
     <section class="germany__container--p2" id="germany">
       <h2 class="hidden">Section Germany part 2</h2>
@@ -241,26 +259,25 @@
             of the harmonica, as it paved the way for the modern instrument we know today.
             <p>
           </div>
-          <picture class="img__harmonica--layers">
-            <img sizes="(max-width: 478px) 100vw, 478px" srcset="
-                  assets/harmonica-layers.png 80w,
-                  assets/harmonica-layers.png 104w,
-                  assets/harmonica-layers.png  578w" src="/assets/harmonica-layers.png g"
-              alt="illustration of how the harmonica is built">
-          </picture>
           <div>
-            <p>As the world progressed, so too did the harmonica. It became more refined, eventually taking on the form that we know
+            <p class="hidden">As the world progressed, so too did the harmonica. It became more refined, eventually taking on the form that we know
             and recognise today. It is characterised by its 10 holes and two reed plates, each equipped with 10 metal reeds.
             Depending on one's location, <span class="semibold">the diatonic harmonica may also be referred to as the "blues harp" in the West, or as the
             "tremolo harmonica" in the East.</span>
           </div>
           <div>
-            <p>Built of 21 metal reeds, the Aura had yet to evolve, as currently it could only play notes when blown.
+            <p class="hidden">Built of 21 metal reeds, the Aura had yet to evolve, as currently it could only play notes when blown.
             </p>
           </div>
         </div>
-
-        {# <canvas></canvas> #}
+        <picture class="img__harmonica--layers">
+          <img sizes="(max-width: 478px) 100vw, 478px" srcset="
+                          assets/harmonica-layers.png 80w,
+                          assets/harmonica-layers.png 104w,
+                          assets/harmonica-layers.png  578w" src="/assets/harmonica-layers.png g"
+            alt="illustration of how the harmonica is built">
+        </picture>
+       {#  <canvas></canvas> #}
       </section>
       <div class="line"></div>
     </section>

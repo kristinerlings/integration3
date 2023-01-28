@@ -335,9 +335,10 @@ font-weight: var(--fw-extralight);
   margin: .5rem 0rem;
 }
 
-.img__sheng, .img__china{
+.img__sheng, .img__china, .img__china--human{
   display:none;
 }
+
 
 
 /*=================== The Journey N =====================*/
@@ -453,6 +454,8 @@ font-weight: var(--fw-extralight);
 
 /*=================== Germany p1 N =====================*/
 
+
+
 .img__shadow--m, .img__shadow{
   display:none;
   z-index:1;
@@ -467,23 +470,17 @@ font-weight: var(--fw-extralight);
 .img__shadowman {
   z-index: 2;
 }
-
+/*shadow*/
 .cnt__germany{
   color:var(--color-white);
   display:flex;
   flex-direction: column;
-  padding-block-end: 20rem;
+  height: 100vh;
+
 }
 
 
-.cnt__germany div:has(p){
- z-index:4;
- position:relative;
- padding: .3rem 0.5rem;
- margin-block-start: 1rem;
- max-width: 100vw;
-}
-
+/*title*/
 .about__germany .txt-wrp-title{
 color:var(--color-white);
 margin-block-end: 4rem; 
@@ -492,6 +489,21 @@ z-index:3;
 }
 
 
+/*text*/
+.cnt__germany div:has(p){
+ z-index:4;
+ position:relative;
+ padding: .3rem 0.5rem;
+ margin-block-start: 1rem;
+ max-width: 100vw;
+}
+
+
+/*Magnify*/
+.img__magnify{
+  position: absolute;
+  z-index: 5;
+}
 
 
 
@@ -523,20 +535,14 @@ z-index:3;
   margin-top: -5rem;
 }
 
+
+
+/*=================== Germany p2 N =====================*/
+
 .img__harmonica--layers img {
   width: 90%;
 }
 
-.title__germany--p2 {
-  width: 60vw;
-}
-
-
-
-/*=================== Germany p2 N =====================*/
- .cnt__germany--p2 {
-   max-width: 100vw;
- }
 
  .cnt__germany--p2 div:has(p){
   padding: 1rem .5rem 2rem;
@@ -546,6 +552,7 @@ z-index:3;
   margin: 0 auto; 
   z-index: 3;
   position: relative;
+
 }
 
 
@@ -553,6 +560,10 @@ z-index:3;
 .cnt__production{
   color:var(--color-white);
 }
+
+
+/* =================== Product N=================== */
+/* =================== Sound Music N  ===================*/
 /* =================== Hohner N =================*/
 .img__hohner-l{
   display:none;
@@ -803,7 +814,6 @@ z-index:3;
   }
 
   .about{
-    grid-template-columns: 1fr 1fr;
     border:.1rem solid var(--color-gold);
   }
 
@@ -905,31 +915,6 @@ z-index:3;
 /*----- RES-2 459 ----*/
 @media only screen and (min-width: 459px){
 
-  .about p {
-      width: 70%;
-      margin: 2rem auto;
-    }
-  .title__china{
-    margin-inline-end: 2rem; 
-  }
-   
-  .img__china-tm, .img__china-tm-2, .img__bamboo-m, .img__sheng-m {
-    display:none;
-  }
-
-  .img__sheng, .img__china{
-    display:inline;
-  }
-    
-  .img__china img {
-   /*  width: 40vw; */
-  }
-
-  .txt-wrp-title h2{
-    line-height: 2.5rem;
-    width:80%;
-  }
-
   /*JOURNEY-RES-2*/
   .fromto{
     padding: 1rem 0rem 0.5rem 1rem; 
@@ -1008,6 +993,8 @@ z-index:3;
   /*----   RES-3  831 -----*/
 
 @media only screen and (min-width:831px) {
+  
+  
   .txt__wrp--hero{
     grid-column: 1/4;
     grid-row: 4/5;
@@ -1150,57 +1137,123 @@ z-index:3;
   }
   
 
+    /*--------Adjust white containers-------------*/
+    .about p {
+      width: 70%;
+      margin: 0.7rem auto;
+    }
+  
+    .title__china {
+      margin-inline-end: 2rem;
+    }
+  
+    .img__china-tm,
+    .img__china-tm-2,
+    .img__bamboo-m,
+    .img__sheng-m {
+      display: none;
+    }
+  
+    .img__sheng,
+    .img__china {
+     display: inline;
+    }
+  
+    .img__china img, .img__sheng img, .img__china--human img {
+      max-height: 40vw;
+      width: auto;
+    }
+  
+    .txt-wrp-title h2 {
+      line-height: 2.5rem;
+      width: 80%;
+    }
+  
+    /*---------------------*/
   /* ---- white containers ----*/
   .line, .about{
     width: 90vw;
     margin: .6rem auto;
   }
 
-  .txt-wrp-title {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    margin-inline-start:10%;
+  .about{
+    padding-block-start: 1rem;
   }
 
   .content{
     grid-row: 3/4;
     grid-column: 2/4;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    max-width: 70%;
   }
-    
+
+
+
+  .about__germany {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 10% 1fr 2fr 1fr;
+  } 
+  
+    /*title*/
+  .about__germany .txt-wrp-title {
+    color: var(--color-white);
+    margin-block-end: 4rem;
+    position: relative;
+    z-index: 3;
+     grid-row: 1/2;
+  } 
+  
+  
+    /*text*/
+   .cnt__germany div:has(p) {
+      z-index: 4;
+      position: relative;
+      padding: .3rem 0.5rem;
+      margin-block-start: 1rem;
+      grid-row: 2/3;
+      margin-inline-start: 15%;
+    } 
+
+
+
+
+  .cnt__germany--p2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }  
+    /*Germany - shadow*/
+
+
+  /*All Content containers*/
   .content div:has(p){
-    grid-column: 1/2;
+    grid-column: 1/3;
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     }
 
-  .content picture {
-    grid-column: 2/3;
-    grid-row: 1/4;
-  }
 
-  .img__harmonica--layers,.img__china, .img__sheng {
+  .txt-wrp-title {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      margin-inline-start:2%;
+    }
+
+  /*move big screen img out of text container*/
+  .img__china, .img__sheng, .img__china--human {
+    grid-row: 1/4;
     grid-column: 3/4;
-    grid-row: 3/4;
-  
   }
    
   .txt-wrp-title h2 {
-    width: 40%;
+    width: 40rem;
     padding: .6rem 2rem;
     line-height: 2.7rem;
   } 
 
-  /*Germany - shadow*/
 
-  .cnt__germany div:has(p){
-   margin-inline-start: 3rem; 
-   grid-column: 1/3;
-  }
   
 
   .mim__text{
