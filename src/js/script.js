@@ -6,6 +6,7 @@ const playAudio = () => {
   audio.play();
 };
 
+
 const init = () => {
   const $menu = document.querySelector('.hamburger');
   const $nav = document.querySelector('.nav');
