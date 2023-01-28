@@ -300,6 +300,9 @@ font-weight: var(--fw-extralight);
   font-family: var(--ff-h2);
   font-weight: var(--fw-bold);
 }
+.title__sm{
+  font-size: clamp(1.0625rem, calc(1.0625rem + ((1vw - 0.1875rem) * 2.0175)), 2.5rem);
+}
 
 .cnt__china div, .cnt__germany div, .cnt__germany--p2{
   margin: .5rem 0rem;
@@ -528,7 +531,6 @@ z-index:3;
   display:none;
 }
 
-
 .content__hohner{
   display:flex;
   flex-direction: column;
@@ -543,12 +545,33 @@ z-index:3;
   border: .1rem solid var(--color-gold);
   z-index: 1;
   max-width: 375px;
+  padding: 4rem 1rem; 
 }
 
 .hohner__title{
   font-size: var(--fs-l);
   font-family: var(--ff-h2);
-  margin-block: 2rem 1.5rem;
+  margin-block: 0rem .5rem;
+}
+.subtitle__wrp--hohner {
+  font-size: var(--fs-s);
+  margin: 0rem 0rem 1rem;
+  font-family: var(--ff-h3);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--fspace-3);
+}
+
+/**/
+.volume__txt--hohner{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.volume__one, .volume__two, .volume__three{
+  padding: .5rem; 
+  border: .1rem solid #AE9F73;
+  margin: 1rem .3rem;
 }
 
 .txt__wrp--hohner{
@@ -586,7 +609,7 @@ z-index:3;
     font-size: 2rem;
     margin: 1rem 0rem .5rem;
   }
-
+ 
   .mim__title{
     font-size: clamp(1.375rem, calc(1.375rem + ((1vw - 0.1875rem) * 2.3457)), 3.75rem);
     font-family: var(--ff-h2);
@@ -793,6 +816,15 @@ z-index:3;
   .fromto{
     padding-block-end: .5rem;
   }
+
+  /*Hohner*/
+  .volume__one,
+  .volume__two,
+  .volume__three {
+    padding: .4rem;
+    border: .1rem solid #AE9F73;
+    margin: 1rem .2rem;
+  } 
 
   /*MIM*/
   .mim__text{
