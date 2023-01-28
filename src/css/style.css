@@ -292,11 +292,15 @@ font-weight: var(--fw-extralight);
 
 .img__intrlight--left, .img__intrlight--right{
   position: absolute;
+  overflow-y: hidden;
   display: flex;
+  margin-block-start: -30%;
 } 
 
 .img__intrlight--left{
   justify-content: flex-end;
+  margin-inline-end: 80%;
+  
 }
 .img__intrlight--right{
   -moz-transform: scaleX(-1);
@@ -304,6 +308,7 @@ font-weight: var(--fw-extralight);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   justify-content: flex-end;
+  margin-inline-start: 80%;
 }
 
 
@@ -796,7 +801,7 @@ z-index:3;
 
  /*=====================INTRO-RES-1=====================*/
   .intro{
-    height: 70vh;
+    height: 100vh;
   }
 
   .intro>p{
@@ -837,7 +842,9 @@ z-index:3;
   .img__china-tm {
     position: absolute;
     grid-column: 1/2;
-    margin-inline-start: -3rem; 
+    margin: -1rem 0rem 0rem -4rem; 
+    /* left: calc(17% - (220px / 2)); 
+    margin-block-start: -1.1rem; */
   }
   .img__china-tm-2{
     display:flex;
@@ -902,7 +909,7 @@ z-index:3;
     margin: 1rem .2rem;
   } 
 
-  /*MIM*/
+  /*MIM ---  RES1 */
   .mim__text{
     max-width: 20rem;
   }
@@ -930,7 +937,7 @@ z-index:3;
   }
 
   .img__china-tm{
-    margin-inline-start:1rem;
+    margin-inline-start:-2rem;
   }
 
   /*Germany*/
@@ -1181,7 +1188,7 @@ z-index:3;
   }
   
 
-    /*--------Adjust white containers-------------*/
+    /*--------Adjust white containers  RES3-------------*/
     .about p {
       width: 70%;
       margin: 0.7rem auto;
@@ -1214,7 +1221,7 @@ z-index:3;
     }
   
     /*---------------------*/
-  /* ---- white containers ----*/
+  /* ---- white containers RES3 831 ----*/
   .line, .about{
     width: 90vw;
     margin: .6rem auto;
