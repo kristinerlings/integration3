@@ -105,6 +105,9 @@ body {
 .semibold{
   font-weight:var(--fw-semibold);
 }
+.gold{
+  color:var(--color-gold);
+}
 
 p {
   font-size: 1.125rem;
