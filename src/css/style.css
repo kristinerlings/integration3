@@ -849,7 +849,7 @@ z-index:3;
   }
     
   .img__china img {
-    width: 40vw;
+   /*  width: 40vw; */
   }
 
   .txt-wrp-title h2{
@@ -1295,5 +1295,14 @@ z-index:3;
    transform: rotate(-30deg);
  }
 
+
+}
+
+@media only screen and (min-width:1440px){
+  .page__container{
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 
 }
