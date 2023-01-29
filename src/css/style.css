@@ -21,6 +21,7 @@ body {
 /*   height: 100vh; */
   width: 100vw; 
   background-color: var(--color-background);
+  
 }
 
 :root {
@@ -77,10 +78,6 @@ body {
        3.  Layout
 =========================================*/
 
-.btn__sound{
-  padding:4rem;
-  background-color: red;;
-}
  .bg__grained {
   width: 100vw;
   position: relative;
@@ -558,9 +555,6 @@ z-index:3;
 
 /*=================== Germany p2 N =====================*/
 
-.img__harmonica--layers img {
-  width: 90%;
-}
 
 
  .cnt__germany--p2 div:has(p){
@@ -568,21 +562,74 @@ z-index:3;
  }
 
 .img__harmonica--layers{
-  margin: 0 auto; 
+/*   margin: 0 auto;  */
   z-index: 3;
   position: relative;
-
 }
 
-
-
-.cnt__production{
-  color:var(--color-white);
-}
 
 
 /* =================== Product N=================== */
+
+.subtitle__production{
+  font-family:var(--ff-h3);
+  font-weight: var(--fw-extralight);
+  letter-spacing: var(--fspace-1);
+  font-size: var(--fs-m);
+
+}
+.title__production{
+  font-family:var(--ff-h2);
+  font-size: clamp(22px, calc(1.375rem + ((1vw - 3px) * 2.4561)), 50px);
+}
+
+.cnt__production{
+  color:var(--color-white);
+  padding:1rem;
+  line-height: var(--f-line-height);
+}
+
+
+ 
+ .line-sm{
+  background-color: var(--color-gold);
+  height: .1rem;
+  margin: .4rem 0rem;
+  width:30%;
+} 
+
+.subtitle__production{
+  margin-block-start: 2rem;
+}
+
+.title__production{
+  margin-block-start: -.5rem;
+}
+
+.txt__wrp--production{
+  margin-block-start: 1.5rem;
+}
+
+/*
+production__container
+txt-wrp-title
+year
+cnt__production
+title__production
+txt__wrp--production
+*/
+
+
+
 /* =================== Sound Music N  ===================*/
+/*
+sound__container
+title__sound
+btn__sound
+img__notes-p
+*/
+
+
 /* =================== Hohner N =================*/
 .img__hohner-l{
   display:none;
@@ -680,7 +727,7 @@ z-index:3;
     margin-block-start:1rem;
   }
 
-  .btn__mim{
+  .btn__mim, .btn__sound{
     padding:1.3rem;
     width:15rem;
     height:50%;
@@ -882,7 +929,7 @@ z-index:3;
   }
   
 
-/*shadow res1*/
+/*shadow ---- res1*/
 
   .img__shadow--reveal--m, .img__shadow--m{
     display:flex;
@@ -890,6 +937,19 @@ z-index:3;
   }
 
 
+ 
+  /* Germany part 2 ------ res1*/
+
+ /*  .germany__container--p2{}
+  .about__germanyp2{}
+  .title__germany--p2{} or .txt-wrp-title
+  .cnt__germany--p2{}
+  .img__harmonica--layers{}
+  .canvas__harmonica{} */
+
+  .title__germany--p2{
+    grid-column: 1/2;
+  }
 
 
   /*journey*/
@@ -962,6 +1022,24 @@ z-index:3;
 /*----- RES-2 459 ----*/
 @media only screen and (min-width: 459px){
 
+  /*CHINA - RES 2*/
+  .txt-wrap--china{
+    width: 34rem;
+  }
+  .cnt__china{
+    margin: 0 auto;
+  }
+
+  .title__china{
+    padding-inline-end: 10%;
+  }
+
+  .img__china-tm{
+    margin-inline-start: 10%;
+  }
+
+
+  
   /*JOURNEY-RES-2*/
   .fromto{
     padding: 1rem 0rem 0.5rem 1rem; 
@@ -980,12 +1058,33 @@ z-index:3;
     max-width: 80%;
   }
   
-  /*MODERN-RES-2**/
+  /*Germany p2   ---RES-2 **/
   .cnt__germany--p2 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  .title__germany--p2 {
+    grid-column: 1/3;
+    margin-inline-end:10%;
+  }
+
+  .title__germany--p2 > h2{
+   line-height: 2.1rem;
+  }
+
+  .cnt__germany--p2{
+   max-width: 33rem; 
+   margin: 1rem auto 0rem;
+  }
+
+  .img__harmonica--layers, .canvas__harmonica{
+   grid-column: 1/3;
+   margin: -5rem auto;
+   padding-block-end:10rem;
+  }
+
 
   /*MIM*/
   .mim__container{
@@ -1013,6 +1112,13 @@ z-index:3;
     width: 50%; 
   }
 
+
+  /* production */
+  .cnt__production{
+  padding: 8%;
+}
+
+
   }
 
 
@@ -1030,12 +1136,19 @@ z-index:3;
 }
    
 .journey__container {
-  width:75%;
+  width:80%;
+  margin: 0 auto;
 }
 
   /*Germany*/
 .cnt__germany{
   width: 30rem;
+}
+.title__china{
+  margin-inline-end: 10%;
+}
+.title__production {
+  margin-inline-start: 10%;
 }
 
 
@@ -1060,7 +1173,7 @@ z-index:3;
   } 
 
   
-  .china__container .intro, .container__usa .intro {
+  .china__container .intro, .intro {
     height: 100vw; 
   }
 
@@ -1123,7 +1236,28 @@ z-index:3;
   }
 
 
-  /*Journey*/
+
+   /* --- CHINA RES3 831 ---*/
+  .title__sm {
+    font-size: var(--fs-m);
+    margin-inline-start: 20%;
+  }
+
+  .subtitle__china{
+    letter-spacing: var(--fspace-3);
+  }
+
+  
+
+  .cnt__china{
+    grid-column: 1/1;
+  }
+  .txt-wrap--china p{
+    margin: -3rem;
+  }
+
+
+  /*--- Journey RES3 831 --- */
   .journey__container{
     width:80%;
     margin: 0 auto;
@@ -1209,8 +1343,9 @@ z-index:3;
     .img__china {
      display: inline;
     }
-  
-    .img__china img, .img__sheng img, .img__china--human img {
+    
+    /*Goddess + img size*/
+    .img__china img, .img__sheng img, .img__china--human img, .img__harmonica--layers {
       max-height: 40vw;
       width: auto;
     }
@@ -1228,28 +1363,40 @@ z-index:3;
   }
 
   .about{
-    padding-block-start: 1rem;
+    padding: 2.5rem 1rem;;
   }
 
+  /*White container germany about and */
   .content{
     grid-row: 3/4;
-    grid-column: 2/4;
-    max-width: 70%;
+    grid-column: 1/3;
+    /* max-width: 60%; */
   }
+  
 
-
-
-  .about__germany {
+  .about__germany, .about__germanyp2 {
     display: grid;
     grid-template-rows: 10% 1fr;
     grid-template-columns: 10% 1fr 2fr 1fr;
   } 
 
-
+  
   .cnt__germany{
     grid-row: 2/3;
     display: grid;
+    margin-inline-start: 15%;
   }
+
+
+/*   .subtitle__about, .title__about{
+    position: relative;
+    z-index: 7;
+  } */
+  .txt__wrp--germany{
+
+    z-index: 5;
+  }
+  
   
     /*title  RES3 831 */
   .about__germany .txt-wrp-title {
@@ -1260,7 +1407,57 @@ z-index:3;
     grid-row: 1/2;
     
   } 
+
+  .about__germanyp2{}
   
+  /*All Content containers*/
+  .content div:has(p){
+/*     grid-column: 1/3; */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    }
+
+
+  .txt-wrp-title {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      margin-inline-start:2%;
+    }
+
+
+  .img__harmonica--layers{
+    position: relative;
+    grid-row: 3/5;
+    grid-column: 2/4;
+  }
+  
+  .cnt__germany--p2 div:has(p){
+    width:40rem;
+  }
+
+  .cnt__germany--p2{
+    margin-inline-start: -2rem;
+  }
+  
+
+
+  /*move big screen img out of text container*/
+  .img__china, .img__sheng, .img__china--human{
+    grid-row: 1/4;
+    grid-column: 3/4;
+    margin-inline-start: -5rem;
+  }
+   
+
+  .txt-wrp-title h2 {
+    width: 40rem;
+    padding: .6rem 2rem;
+    line-height: 2.7rem;
+  } 
+
+
   
     /*text*/
    /* .cnt__germany div:has(p) */ 
@@ -1275,6 +1472,7 @@ z-index:3;
 
 
 
+    /*----Germany RES3---*/
 
   .cnt__germany--p2{
     display: grid;
@@ -1282,41 +1480,25 @@ z-index:3;
     grid-template-rows: auto;
   }  
     /*Germany - shadow*/
-
-  .
-
-  /*All Content containers*/
-  .content div:has(p){
-    grid-column: 1/3;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    }
-
-
-  .txt-wrp-title {
-      grid-row: 2/3;
-      grid-column: 2/3;
-      margin-inline-start:2%;
-    }
-
-  /*move big screen img out of text container*/
-  .img__china, .img__sheng, .img__china--human {
-    grid-row: 1/4;
-    grid-column: 3/4;
-  }
-   
-  .txt-wrp-title h2 {
-    width: 40rem;
-    padding: .6rem 2rem;
-    line-height: 2.7rem;
-  } 
   
-
   .mim__text{
     width: 20rem;
   }
+
+  /*production RES3*/
+  .title__production {
+  margin-inline-start: 10%;
+  }
+
+  .cnt__production {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  }
+  
+  .title__production, .subtitle__production, .txt__wrp--production, .line-sm{
+  grid-column: 2/3;
+  }
+
 
 }
 
@@ -1381,6 +1563,7 @@ z-index:3;
 
 /* --------- RES-3.2 930 ------- */
 @media only screen and (min-width:930px){
+  
 
   /*Hohner -Res-3.5 */
     .img__hohner-l,
@@ -1412,9 +1595,30 @@ z-index:3;
       position: absolute;
       z-index: 3;
       bottom: 0;
-  
     }
-    
+
+     .cnt__germany {
+       margin-block-start: -13rem;
+       justify-content: flex;
+       flex-direction: column;
+     }
+
+    .about__germany .txt-wrp-title {
+      margin-block-end: 20%;
+      position: relative;
+      z-index: 3;
+      grid-row: 1/2;
+    }
+
+    /*production res*/
+/*     .cnt__production{
+      margin: 0 auto;
+    }
+ */
+ /*    .txt__wrp--production{
+      width: 70%;
+    }
+     */
 }
 
 
@@ -1452,9 +1656,46 @@ z-index:3;
  }
 
 
-.txt--journey {
+ /*SHENG - white container*/
+ /*White containers */
+  .title__china {
+    margin-inline-end: 0rem;
+  }
+
+  .txt-wrp-title {
+   margin-inline-start: -45rem;
+  }
+
+  .about {
+   padding: 1rem 0rem;
+  }
+
+ /*White container germany about and */
+  .content {
+   max-width: 90%;
+  }
+
+
+  .txt--journey {
     width: 80%; 
   }
+
+  .txt__wrp--hohner{
+    width: 80%;
+  }
+  
+
+/*   .subtitle__about, .title__about{
+    position:relative;
+    z-index: 5;
+  } */
+  
+  .about__germany .txt-wrp-title {
+    margin-inline-start: 10%;
+    position: relative;
+  }
+    
+
  }
 
     /*----   RES-5  1200 -----*/
@@ -1467,15 +1708,25 @@ z-index:3;
     .img__light--on {
       margin-inline-start: -.5rem;
     }
+
+    .cnt__germany {
+      margin-inline-start: 20%;
+      width: 32rem;
+    }
+
+    /*Production*/
+    .cnt__production{
+      width: 70rem;
+    } 
  } 
 
 
 
  /*----   RES-4  1350 -----*/
 @media only screen and (min-width:1350px) {
-.txt__wrp--hero {
-  margin-inline-start: -20em;
-}
+  .txt__wrp--hero {
+    margin-inline-start: -20em;
+  }
 
   .pic__harmonica{
     margin-inline-end: calc(30%);
@@ -1505,6 +1756,38 @@ z-index:3;
  }
 
 
+ /*The Sheng - white container*/
+
+  /*White container germany about and */
+  .content{
+    max-width: 85%; 
+  }  
+
+  .txt-wrp-title{
+    grid-column: 3/4;
+    margin-inline-end: 20rem;
+  }
+
+  .cnt__germany {
+    margin-inline-start: 30%;
+    margin-block-start: -5rem;
+  }
+  
+  /*Production*/
+ /*  .cnt__production {
+    padding: 25%;
+  } */
+
+    
+  .about__germany .txt-wrp-title {
+    margin-inline-start: 10%;
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .txt__wrp--germany{
+    margin-inline-end: -5rem;
+  }
 }
 
 @media only screen and (min-width:1550px){
