@@ -610,15 +610,6 @@ z-index:3;
   margin-block-start: 1.5rem;
 }
 
-/*
-production__container
-txt-wrp-title
-year
-cnt__production
-title__production
-txt__wrp--production
-*/
-
 
 
 /* =================== Sound Music N  ===================*/
@@ -628,6 +619,28 @@ title__sound
 btn__sound
 img__notes-p
 */
+
+
+
+.sound__container {
+  height: 60vw;
+}
+
+
+.btn__sound {
+  height: 4rem;
+}
+
+
+.title__sound {
+  font-family: var(--ff-h3);
+  font-weight: var(--fw-extralight);
+  color: var(--color-white);
+  letter-spacing: var(--fspace-2);
+  font-size: var(--fs-m);
+  line-height: 2.5rem;
+}
+
 
 
 /* =================== Hohner N =================*/
@@ -728,11 +741,9 @@ img__notes-p
   }
 
   .btn__mim, .btn__sound{
-    padding:1.3rem;
-    width:15rem;
-    height:50%;
+    padding:2.4rem 3rem;
     text-decoration: none;
-    border-radius: .2rem;
+    border-radius: .3rem;
     background: linear-gradient(180deg,
         rgba(251, 213, 122, 1) 27%,
         rgba(250, 215, 125, 1) 50%,
@@ -749,6 +760,11 @@ img__notes-p
     margin-block-start:1rem;
   }
 
+  .btn__mim{
+   height: 50%;
+  width: 15rem;
+  }
+
   .btn__mim:hover{
     background-color:rgb(141, 99, 45);
   }
@@ -760,6 +776,15 @@ img__notes-p
   .img__mim--m img{
     margin-block-start: 1rem;
   }
+
+  /*YEAR*/
+  .germany__container--p2 .year, .production__container .year{
+    font-size: var(--fs-xxl);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
 
 
@@ -929,7 +954,7 @@ img__notes-p
   }
   
 
-/*shadow ---- res1*/
+  /*shadow ---- res1*/
 
   .img__shadow--reveal--m, .img__shadow--m{
     display:flex;
@@ -940,7 +965,7 @@ img__notes-p
  
   /* Germany part 2 ------ res1*/
 
- /*  .germany__container--p2{}
+  /*  .germany__container--p2{}
   .about__germanyp2{}
   .title__germany--p2{} or .txt-wrp-title
   .cnt__germany--p2{}
@@ -969,15 +994,58 @@ img__notes-p
     margin: 1rem .2rem;
   } 
 
-  /*MIM ---  RES1 */
+  /*----  MIM RES1  -----*/
+  
+  
   .mim__text{
     max-width: 20rem;
   }
   .txt__wrp--magnify {
      width: 80%;
    }
-}
 
+
+  /*Production*/
+  .production__container{
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*sound*/
+  .sound__container {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+  }
+
+ .sound__left {
+  order:1;
+  text-align: center;
+ }
+
+ .title__sound{
+  width: 20rem;
+  margin-block:2rem;
+ }
+
+ .img__harmonica--sound {
+  width: 320px;
+  transform: rotate(-20deg);
+  order:-1;
+  margin:-10rem 0rem 5rem 0rem; 
+ }
+
+ .btn__sound{
+  padding: 2.5rem 1.3rem;
+  margin: 0rem 0rem 4rem 2rem; 
+ }
+}
 
 
 
@@ -1105,7 +1173,7 @@ img__notes-p
   }
 
   .btn__mim{
-    margin-left: 1.5rem;
+    height: 5rem;
   }
 
   .txt__wrp--magnify{
@@ -1115,9 +1183,13 @@ img__notes-p
 
   /* production */
   .cnt__production{
-  padding: 8%;
-}
+  padding: 8%;  
+  }
 
+
+  .img__harmonica--sound{
+  width: 400px;
+  }
 
   }
 
@@ -1152,7 +1224,20 @@ img__notes-p
 }
 
 
+/*sound container - RES 2.1 576*/
+
 }
+
+/*  RES 2.2  770 */
+
+@media only screen and (min-width: 770px){
+  .cnt__china div:has(p){
+    width: 40rem;
+    margin-block-start: 2.4rem;
+  }
+
+}
+
 
   /*----   RES-3  831 -----*/
 
@@ -1500,6 +1585,53 @@ img__notes-p
   }
 
 
+  /*sound RES3*/
+  .sound__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vw;
+  position: relative;
+}
+
+.sound__left {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+
+.img__harmonica--sound {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+}
+
+.btn__sound {
+  height: 4rem;
+  padding: 2rem;
+}
+
+.img__notes-s {
+  position: relative;
+  margin-inline-start: -3rem;
+}
+
+.title__sound {
+  margin-block-end: 3rem;
+}
+
+.production__container .year{
+  margin: 10rem 5rem  -2rem;
+}
+
+.germany__container--p2 .year{
+ margin: 0rem 5rem 5rem;
+}
+
+
 }
 
 
@@ -1557,8 +1689,11 @@ img__notes-p
       display:flex;
       grid-column: 3/5;
       grid-row: 3/5;
-      margin-block-start: -2rem; 
+     
+      width:349px;
     }
+
+    
 }
 
 /* --------- RES-3.2 930 ------- */
@@ -1603,22 +1738,29 @@ img__notes-p
        flex-direction: column;
      }
 
-    .about__germany .txt-wrp-title {
-      margin-block-end: 20%;
+     .about__germany .txt-wrp-title {
+      margin-block-start: -6rem;
       position: relative;
       z-index: 3;
       grid-row: 1/2;
+    } 
+
+
+    /*SOUND RES3.2*/
+  
+    .img__harmonica--sound {
+      width: 380px;
+    }
+  
+    .img__notes-s {
+      position: relative;
+      margin-inline-start: -4rem;
+    }
+  
+    .title__sound {
+      margin-block-end: 3rem;
     }
 
-    /*production res*/
-/*     .cnt__production{
-      margin: 0 auto;
-    }
- */
- /*    .txt__wrp--production{
-      width: 70%;
-    }
-     */
 }
 
 
@@ -1685,7 +1827,7 @@ img__notes-p
   }
   
 
-/*   .subtitle__about, .title__about{
+  /*   .subtitle__about, .title__about{
     position:relative;
     z-index: 5;
   } */
@@ -1694,9 +1836,52 @@ img__notes-p
     margin-inline-start: 10%;
     position: relative;
   }
+  
+  
+    /*SOUND RES3.2*/
+
+  .sound__container{
+    height: 99vh;
+  }
+  .img__harmonica--sound {
+    width: 450px;
+    margin-inline-start: -5rem;
+  }
+  .sound__left{ 
+    margin-inline-start: 3rem;
+  }
+  /*    .btn__sound {
+      height: 4rem;
+      padding: 2rem;
+    } */
+
+  .img__notes-s {
+    position: relative;
+    margin-inline-start: -4rem;
+  }
+
+  .title__sound {
+    margin-block-end: 3rem;
+    padding: 0rem 10rem 0rem 0rem;
+  }
+
+  .img__mim {  
+    width: 395px;
+   }
+
+   .mim__title{
+    line-height: 2.8rem;
+   }
+
+   .mim__text{
+    width: 25rem;
+   }
+
+
+  }
     
 
- }
+ 
 
     /*----   RES-5  1200 -----*/
  @media only screen and (min-width:1250px) {
@@ -1773,11 +1958,6 @@ img__notes-p
     margin-block-start: -5rem;
   }
   
-  /*Production*/
- /*  .cnt__production {
-    padding: 25%;
-  } */
-
     
   .about__germany .txt-wrp-title {
     margin-inline-start: 10%;
@@ -1788,6 +1968,35 @@ img__notes-p
   .txt__wrp--germany{
     margin-inline-end: -5rem;
   }
+
+
+
+
+  /*--SOUND RES4 --*/
+
+  .img__harmonica--sound {
+    width: 449px;
+    margin: 1rem -8rem;
+  }
+
+  .sound__left{
+    padding-inline-start: 3rem;
+  }
+
+ .btn__mim {
+   width: 20rem;
+   margin-inline-start: -5rem;
+
+  }
+  
+  .production__container .year{
+    margin: 18rem 5rem  -2rem;
+  }
+
+  .germany__container--p2 .year{
+    margin: 10rem 5rem 5rem;
+  }
+
 }
 
 @media only screen and (min-width:1550px){
