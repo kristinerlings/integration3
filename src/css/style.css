@@ -215,26 +215,26 @@ font-weight: var(--fw-extralight);
 
 
 
-.img__light-left, .img__light-right{
+/* .img__light-left, .img__light-right,  */.img__light--header{
   position:absolute;
   z-index:1;
+  top:0;
+  left:0;
 
  /*  overflow:hidden;  */
 }
 
-.img__light-left{
+/* .img__light-left{
   left: -4rem;
   top: -5rem;
 }
  .img__light-right {
    top: 3rem;
    right: -10rem;
-   /* left:12rem; */
+   /* left:12rem; 
  }
 
-
-
-
+*/
 /*===================== INTRODUCTION N =====================*/
 .introduction__container{
   height: 30vw;
@@ -252,6 +252,7 @@ font-weight: var(--fw-extralight);
   font-weight: var(--fw-light);
   letter-spacing: var(--fspace-3);
   text-align: center;
+  padding: 0rem 1rem;
 }
 
 
@@ -850,14 +851,14 @@ img__notes-p
     padding-bottom:6rem;
   }
 
-  .img__light-left{
+/*   .img__light-left{
     margin-bottom:21rem;
   }
    
   .img__light-right{
     top:12rem;
   }
-
+ */
   p {
     font-size: 1rem;
   }
@@ -1275,9 +1276,9 @@ img__notes-p
     grid-row: 2/3;
   }
 
-  .img__light-left{
+  /* .img__light-left{
     margin: 3vw 0rem 0rem 6vw; 
-  }
+  } */
   .img__light-right{
     z-index:1;
     margin: 0vw 6vw 10vw 0rem;
