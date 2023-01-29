@@ -1,10 +1,20 @@
 const $playSound = document.querySelector('.btn__sound');
 
-const playAudio = () => {
-  const audio = new Audio('audio/245091__neilseggar__g-harmonica.wav');
+const audio = new Audio('audio/245091__neilseggar__g-harmonica.wav');
+let isPlaying = false;
 
-  audio.play();
+const toggleAudio = () => {
+  if (!isPlaying) {
+    audio.play();
+    isPlaying = true;
+    $playSound.textContent = 'Pause Harmonica';
+  } else {
+    audio.pause();
+    isPlaying = false;
+    $playSound.textContent = 'Listen to Harmonica';
+  }
 };
+
 
 
 const init = () => {
@@ -15,7 +25,8 @@ const init = () => {
     $nav.classList.toggle('show_nav');
   });
 
-  $playSound.addEventListener('click', playAudio);
+
+  $playSound.addEventListener('click', toggleAudio);
 };
 
 init();
