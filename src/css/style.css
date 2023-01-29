@@ -966,7 +966,7 @@ img__notes-p
   /* Germany part 2 ------ res1*/
 
   /*  .germany__container--p2{}
-  .about__germanyp2{}
+  .about__germany--p2{}
   .title__germany--p2{} or .txt-wrp-title
   .cnt__germany--p2{}
   .img__harmonica--layers{}
@@ -1141,7 +1141,10 @@ img__notes-p
   .title__germany--p2 > h2{
    line-height: 2.1rem;
   }
-
+  
+  .germany__p2--left{
+    grid-column: 1/3;
+  }
   .cnt__germany--p2{
    max-width: 33rem; 
    margin: 1rem auto 0rem;
@@ -1452,14 +1455,14 @@ img__notes-p
   }
 
   /*White container germany about and */
-  .content{
+  .cnt__china, .cnt__germany {
     grid-row: 3/4;
     grid-column: 1/3;
     /* max-width: 60%; */
   }
   
 
-  .about__germany, .about__germanyp2 {
+  .about__germany {
     display: grid;
     grid-template-rows: 10% 1fr;
     grid-template-columns: 10% 1fr 2fr 1fr;
@@ -1478,12 +1481,13 @@ img__notes-p
     z-index: 7;
   } */
   .txt__wrp--germany{
-
     z-index: 5;
   }
   
   
     /*title  RES3 831 */
+
+
   .about__germany .txt-wrp-title {
     color: var(--color-white);
     margin-block-end: 10em;
@@ -1493,7 +1497,6 @@ img__notes-p
     
   } 
 
-  .about__germanyp2{}
   
   /*All Content containers*/
   .content div:has(p){
@@ -1505,27 +1508,13 @@ img__notes-p
     }
 
 
-  .txt-wrp-title {
+  .title__china, .title__germany--p1{
       grid-row: 2/3;
       grid-column: 2/3;
       margin-inline-start:2%;
+
     }
 
-
-  .img__harmonica--layers{
-    position: relative;
-    grid-row: 3/5;
-    grid-column: 2/4;
-  }
-  
-  .cnt__germany--p2 div:has(p){
-    width:40rem;
-  }
-
-  .cnt__germany--p2{
-    margin-inline-start: -2rem;
-  }
-  
 
 
   /*move big screen img out of text container*/
@@ -1557,13 +1546,8 @@ img__notes-p
 
 
 
-    /*----Germany RES3---*/
+   
 
-  .cnt__germany--p2{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-  }  
     /*Germany - shadow*/
   
   .mim__text{
@@ -1631,6 +1615,10 @@ img__notes-p
  margin: 0rem 5rem 5rem;
 }
 
+/*germany p2*/
+  .cnt__germany--p2 div:has(p){
+  width:  60rem;
+  }
 
 }
 
@@ -1738,7 +1726,7 @@ img__notes-p
        flex-direction: column;
      }
 
-     .about__germany .txt-wrp-title {
+     .title__germany--p1 {
       margin-block-start: -6rem;
       position: relative;
       z-index: 3;
@@ -1804,9 +1792,6 @@ img__notes-p
     margin-inline-end: 0rem;
   }
 
-  .txt-wrp-title {
-   margin-inline-start: -45rem;
-  }
 
   .about {
    padding: 1rem 0rem;
@@ -1876,6 +1861,37 @@ img__notes-p
    .mim__text{
     width: 25rem;
    }
+
+
+    /*----Germany PART 2 RES4  SOS4  ---*/
+
+  .about__germany--p2{
+    display:grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .cnt__germany--p2{
+    display:flex;
+    flex-direction: column;
+    margin-inline-start: -1rem;
+  }  
+  .cnt__germany--p2 div:has(p) {
+    width: 40rem;
+  }
+
+  .germany__p2--left{
+    grid-column: 1/2;
+    margin: 3rem 0rem 0rem 3rem;
+
+  }
+
+  .img__harmonica--layers{
+    grid-column: 2/3;
+    margin: auto 0;
+    padding-block-end: .5rem;
+    width:30vw;
+  }
+  
 
 
   }
