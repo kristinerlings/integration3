@@ -86,7 +86,7 @@ body {
 
 
 /*Hidden properties*/
-.hidden, .img__china-tm, .img__china-tm-2, .img__bamboo-m{
+.hidden, .img__china-tm, .img__china-tm-b, .img__bamboo-m{
   display:none;
 }
 
@@ -113,6 +113,9 @@ p {
   }
 
 /*===================== Header and navigation=====================*/
+
+
+
 .header{
   height: 100vh;
 }
@@ -125,7 +128,10 @@ p {
   justify-content: space-between;
   border-bottom: .1rem solid var(--color-gold);
   background-color: var(--color-background);
-  z-index:2;
+  z-index:100;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -774,7 +780,7 @@ img__notes-p
     display:none;
   }
 
-  .img__mim--m img{
+  .img__mim--m{
     margin-block-start: 1rem;
   }
 
@@ -909,7 +915,7 @@ img__notes-p
     border:.1rem solid var(--color-gold);
   }
 
-  .img__china-tm, .img__china-tm-2, .img__bamboo-m{
+  .img__china-tm, .img__china-tm-b, .img__bamboo-m{
     display:block;
   }
   .img__china-tm {
@@ -919,7 +925,7 @@ img__notes-p
     /* left: calc(17% - (220px / 2)); 
     margin-block-start: -1.1rem; */
   }
-  .img__china-tm-2{
+  .img__china-tm-b{
     display:flex;
     justify-content: center;
   }
@@ -1422,7 +1428,7 @@ img__notes-p
     }
   
     .img__china-tm,
-    .img__china-tm-2,
+    .img__china-tm-b,
     .img__bamboo-m,
     .img__sheng-m {
       display: none;
@@ -1434,7 +1440,7 @@ img__notes-p
     }
     
     /*Goddess + img size*/
-    .img__china img, .img__sheng img, .img__china--human img, .img__harmonica--layers {
+    .img__china, .img__sheng, .img__china--human, .img__harmonica--layers {
       max-height: 40vw;
       width: auto;
     }
