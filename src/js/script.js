@@ -69,32 +69,21 @@ const createTimeline = (trigger, start, end, scrub, pin) => {
   return tl;
 };
 
+const containerHeader = () => {
+let tl = createTimeline('.header', 'top top', '+=40', 1, true);
+
+
+  tl.to('.img__light--header', {scale:1.1 ,duration: 1});
+  
+}
+
 const containerChina = () => {
-/* tlOne.set(
-    '.hohner__two,  .hohner__two p, .hohner__three,  .hohner__three p',
-    {
-      opacity: 0,
-      display: 'none',
-    }
-  );
-  tlOne.set('.volume__one', { backgroundColor: '#E3C371'});
-  tlOne.to('.img__envelope-l-t, .img__envelope-l-b',{y:500});
-
-
-
-    tl.to('.hohner__one, .hohner__one p', { opacity: 0, display: 'none' });
-    tl.to('.volume__two', { backgroundColor: '#E3C371' });
-    tl.to('.hohner__two, .hohner__two p', {opacity: 1, display:'block'},'<');
-    tl.to('.hohner__two, .hohner__two p', { opacity: 0, display: 'none'});
-    tl.to('.volume__three', { backgroundColor: '#E3C371' });
-    tl.to('.hohner__three, .hohner__three p', {opacity: 1,display: 'block'},'<');
-   
- */
+ let mm = gsap.matchMedia();
+ mm.add("(min-width: 900px)", () => {
 
   let tl = createTimeline('.about__china', 'top +=100', '+=3000', 1, true);
 
   /*   rotation: '180deg', */
-
   tl.set('.txt__wrp--sheng, .title__china, .img__sheng, .img__china--human', {
     opacity: 0,
     display: 'none',
@@ -104,13 +93,8 @@ const containerChina = () => {
     duration: 1,
     easeOut: 'power2.in',
   });
- /*  tl.set('.title__china', {
-    position: 'absolute',
-    x: -300,
-  }); */
   tl.to('.title__china', {
    opacity: 1, display:'block',
-/*    position: 'absolute', */
     duration: 1,
   });
   tl.to('.first', {
@@ -157,32 +141,25 @@ const containerChina = () => {
     display: 'none',
     duration: 2,
   });
+  });
 };
 
 
+
+
 const containerJourney = () => {
- /*  let tl = createTimeline(
-    '.journey__container',
-    'top top',
-    '+=1000',
-    0.1,
-   true
-  );  */
 
   let tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.journey__container',
     start: "top top",
-    end: '+=6000',
+    end: '+=1000',
     pin: true,
-    unpin: ()=>
-      window.scrollY > '+=400',
+    /* unpin: ()=>
+      window.scrollY > 'bottom', */
   }
 });
  
-
-
-
   tl.set('.txt-wrap,.img__footstep, img__footstep-last, img__footstep-l', {
     autoAlpha: 0,
   });
@@ -391,7 +368,7 @@ const init = () => {
  */
 
 
-
+  containerHeader();
    containerChina(); 
   containerJourney();
   containerIntroGermany();  //R
