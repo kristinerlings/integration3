@@ -91,56 +91,70 @@ const containerChina = () => {
    
  */
 
-  let tl = createTimeline('.about__china', 'top 20%', '+=5000', 1, true);
+  let tl = createTimeline('.about__china', 'top +=100', '+=3000', 1, true);
 
   /*   rotation: '180deg', */
 
   tl.set('.txt__wrp--sheng, .title__china, .img__sheng, .img__china--human', {
-    autoAlpha: 0,
+    opacity: 0,
+    display: 'none',
   });
   tl.from('.img__china', {
     scale: 1.5,
     duration: 1,
     easeOut: 'power2.in',
   });
+ /*  tl.set('.title__china', {
+    position: 'absolute',
+    x: -300,
+  }); */
   tl.to('.title__china', {
-    autoAlpha: 1,
+   opacity: 1, display:'block',
+/*    position: 'absolute', */
     duration: 1,
   });
   tl.to('.first', {
-    autoAlpha: 1,
+    opacity: 1,
+    display: 'block',
     duration: 1,
-  });
+  },'<');
   tl.to('.img__china--human', {
-    autoAlpha: 1,
+    opacity: 1,
+    display: 'block',
     duration: 0.5,
   });
-  tl.to('.first', {
-    autoAlpha: 0,
-    duration: 2,
-  });
   tl.to('.img__china--human, .img__china', {
-    autoAlpha: 0,
+    opacity: 0,
+    display: 'none',
     duration: 1,
   });
   tl.to('.img__sheng', {
-    autoAlpha: 1,
+    opacity: 1,
+    display: 'block',
     duration: 0.5,
   });
-  tl.to('.second', {
-    autoAlpha: 1,
+  tl.to('.first', {
+   opacity: 0, display: 'none',
     duration: 1,
   });
   tl.to('.second', {
-    autoAlpha: 0,
+    opacity: 1,
+    display: 'block',
+    duration: 2,
+  });
+  tl.to('.second', {
+    opacity: 0,
+    display: 'none',
     duration: 1,
   });
   tl.to('.third', {
-    autoAlpha: 1,
+    opacity: 1,
+    display: 'block',
     duration: 2,
   });
   tl.to('.third', {
-    autoAlpha: 0,
+    opacity: 0,
+    display: 'none',
     duration: 2,
   });
 };
@@ -378,13 +392,13 @@ const init = () => {
 
 
 
-/*    containerChina();  */
- /* containerJourney();
-  containerIntroGermany();  *///R
+   containerChina(); 
+  containerJourney();
+  containerIntroGermany();  //R
   containerShadow();
-/*   harmonicaSequences(); */
- /*  containerHohner();
- */
+/*  harmonicaSequences();  */
+   containerHohner();
+ 
 
   intersectionObserver();
   $playSound.addEventListener('click', toggleAudio);

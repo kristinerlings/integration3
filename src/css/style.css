@@ -81,11 +81,6 @@ body {
 /* .hohner__two p, .hohner__three p{
   display:none;
 } */
-.content__hohner{
-  height:100vh;
-  padding: 0rem 2rem; 
-
-}
 
  .bg__grained {
   width: 100vw;
@@ -152,20 +147,22 @@ p {
 .nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+/*   align-items: center;
+  justify-content: center; */
   gap: 1.25rem;
+  position:absolute;
+  left: 50%;
+  right: -50;
 }
 
 .nav__item {
   list-style-type: none;  
   font-size: clamp(18px, calc(1.125rem + ((1vw - 3px) * 1.0526)), 30px);
-  
+
 }
 
 .nav__item a {
   text-decoration: none;
-  
 }
 
 .hamburger {
@@ -368,9 +365,6 @@ font-weight: var(--fw-extralight);
   margin: .5rem 0rem;
 }
 
-.img__sheng, .img__china, .img__china--human{
-
-}
 .img__china{
   position: relative;
   z-index: 3;
@@ -645,9 +639,9 @@ z-index:3;
 
 
 .sound__container {
-      position: relative;
-      height: 100%;
-      padding: 1rem 0rem;
+  position: relative;
+  height: 100%;
+  padding: 1rem 0rem;
 }
 
 
@@ -671,8 +665,6 @@ z-index:3;
 .img__hohner-l{
   display:none;
 }
-
-
 
 .content__hohner{
   display:flex;
@@ -1052,7 +1044,7 @@ z-index:3;
   
   /*sound*/
   .sound__container {
-    display:relative;
+  display:relative;
    height: 100%;
    display: flex;
    flex-direction: column;
@@ -1579,7 +1571,7 @@ z-index:3;
     }
   
     .img__sheng,
-    .img__china {
+    .img__china, .img__china--human {
      display: inline;
     }
     
@@ -2092,9 +2084,10 @@ z-index:3;
 @media only screen and (min-width:1350px) {
   .txt__wrp--hero {
     margin-inline-start: -20em;
+    padding-block-end: 1rem; 
   }
 
-  .pic__harmonica, .img__harmonica{
+  .img__harmonica{
     margin-inline-end: calc(30%);
   }  
  
@@ -2120,37 +2113,6 @@ z-index:3;
    margin-inline-start: -6vw;
    transform: rotate(-30deg);
  }
-
-
- /*The Sheng - white container*/
-
-  /*White container germany about and */
- /*  .content{
-    max-width: 85%; 
-  }  
-
-  .txt-wrp-title{
-    grid-column: 3/4;
-    margin-inline-end: 20rem;
-  }
-
-  .cnt__germany {
-    margin-inline-start: 30%;
-    margin-block-start: -5rem;
-  }
-  
-    
-  .about__germany .txt-wrp-title {
-    margin-inline-start: 10%;
-    position: relative;
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .txt__wrp--germany{
-    margin-inline-end: -5rem;
-  } */
-
-
 
 
   /*--SOUND RES4 --*/
