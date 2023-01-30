@@ -167,9 +167,9 @@ p {
   text-decoration: none;
 }
 
-.hamburger {
+/* .hamburger {
   display: none;
-}
+} */
 .languages{
   display:flex;
   padding-inline-end: 1rem;
@@ -862,9 +862,9 @@ z-index:3;
     border-radius: 1.2rem;
   }
 
-  .hamburger {
+/*   .hamburger {
     display: block;
-  }
+  } */
   .img__harmonica{
     transform: rotate(-20deg);
   }
