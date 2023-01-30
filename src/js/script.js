@@ -71,7 +71,7 @@ const createTimeline = (trigger, start, end, scrub, pin) => {
 };
 
 const containerChina = () => {
-  let tl = createTimeline('.about', 'top 20%', '+5000', 1, true);
+  let tl = createTimeline('.about', 'top 20%', '+=5000', 1, true);
 
   /*   rotation: '180deg', */
 
@@ -168,26 +168,41 @@ const containerJourney = () => {
 const containerIntroGermany = () =>{
   let tl = createTimeline(
     '.germany__container--one',
-    'center +=100',
-    '+1000',
+    'top -=300',
+    '+=3500',
     1,
     true
   );
-
+  tl.set('.img__intrlight--right',{opacity:0});
   tl.set('.chapter__title',{
     display: 'block',
   })
-  tl.from('.chapter__title',{
-    opacity:'50%',
-  })
+  tl.to('.img__intrlight--right', {
+    opacity:1,
+  });
+  tl.to('.chapter__title',{
+    opacity:'50%'},"<50%"); 
+
+  tl.from('.img__intrlight--left', {
+    rotation: -60,
+    transformOrigin: 'left  50%',
+    duration:0.5,
+    scale: 1.4,
+  },"<");
+
+  tl.to('.chapter__title', {
+      opacity: '100%',
+  },"<50%");
 
 } 
 
 
 const containerShadow = () =>{
- let tl = createTimeline('.germany__container--one', 'top -=300', '+2000', 1, true);
+    let tl = createTimeline('.about__germany', 'top top', '+=2000', 1, true);
 
-  
+    tl.from('.img__shadow', {});
+    tl.from('img__shadow--reveal', {},"<");
+   
 }
 
 const largeScreenSize = () => {};
@@ -218,7 +233,7 @@ const init = () => {
 
 /*   containerChina(); */
   /* containerJourney(); */
-  containerIntroGermany();
+ /*  containerIntroGermany(); */ //R
   containerShadow();
 
   intersectionObserver();
