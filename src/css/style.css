@@ -345,10 +345,18 @@ font-weight: var(--fw-extralight);
 }
 
 .img__sheng, .img__china, .img__china--human{
-  display:none;
+
+}
+.img__china{
+  position: relative;
+  z-index: 3;
 }
 
 
+.img__china--human{
+  position: relative;
+  z-index: 4;
+}
 
 /*=================== The Journey N =====================*/
 .journey__container{
@@ -396,7 +404,7 @@ font-weight: var(--fw-extralight);
 }
 
 
-.txt--journey>.txt-wrap {
+.txt--journey> .txt__first, .txt--journey>.txt-wrap {
   width: 100%;
 }
 
@@ -449,15 +457,6 @@ font-weight: var(--fw-extralight);
   margin-inline-start: 4rem;
   margin-block-start: 4rem;
   transform: rotate(10deg);
-}
-
-.img__footstep-l, .img__footstep-l2{
-  display:none; 
-}
-
-.img__light--off,
-.img__light--on {
-  margin-block-start: -2rem;
 }
 
 
@@ -946,6 +945,7 @@ img__notes-p
   .img__sheng{
     display:none;
   }
+
   .img__sheng-m{
     display: flex;
     justify-content: center;
@@ -1052,6 +1052,31 @@ img__notes-p
   padding: 2.5rem 1.3rem;
   margin: 0rem 0rem 4rem 2rem; 
  }
+ /*Journey*/
+
+.img__footstep-l,
+.img__footstep-l2 {
+  display: block;
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+
+.img__footstep-l {
+  margin: 5rem 0rem 0rem 1rem;
+  transform: rotate(-80deg);
+}
+
+.img__footstep-l2 {
+  margin: 12rem 0rem 0rem 5rem;
+  transform: rotate(-100deg);
+}
+
+
+.img__light--off,
+.img__light--on {
+  grid-column: 1/3;
+}
 }
 
 
@@ -1205,7 +1230,30 @@ img__notes-p
 
 
 @media only screen and (min-width: 576px){
-  
+/*LILI*/
+.img__light--off,
+.img__light--on {
+    margin-block-start: -10%;
+    grid-column: 2/4;
+  }
+.img__footstep-l,
+.img__footstep-l2 {
+  display: block;
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+.img__footstep-l {
+  margin: 5rem 0rem 0rem 8rem;
+  transform: rotate(-80deg);
+}
+
+.img__footstep-l2 {
+  margin: 12rem 0rem 0rem 12rem;
+  transform: rotate(-105deg);
+}
+
+/**/
 .introduction__container {
   margin-block-start: 2rem;
   height: 100vh;
@@ -1400,21 +1448,6 @@ img__notes-p
     justify-content: center;
   }
 
-  /*pair 3*/
-  .img__footstep-l,.img__footstep-l2{
-    display:block;
-    grid-column: 1/3;
-    grid-row: 5/6;
-  }
-
-  .img__footstep-l{
-    margin: 5rem 0rem 0rem 8rem;
-    transform: rotate(-80deg);
-  }
-  .img__footstep-l2 {
-    margin: 12rem 0rem 0rem 12rem;
-    transform: rotate(-105deg);
-  }
   
 
     /*--------Adjust white containers  RES3-------------*/
@@ -1688,7 +1721,6 @@ img__notes-p
       width:349px;
     }
 
-    
 }
 
 /* --------- RES-3.2 930 ------- */
