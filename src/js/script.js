@@ -52,7 +52,7 @@ const intersectionObserver = () => {
 
 let currentIndex = 0;
 
-const createTimeline = (trigger, start, end, scrub, pin) =>{
+const createTimeline = (trigger, start, end, scrub, pin) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: trigger,
@@ -67,8 +67,8 @@ const createTimeline = (trigger, start, end, scrub, pin) =>{
       },
     },
   });
-   return tl;
-}
+  return tl;
+};
 
 const containerChina = () => {
   let tl = createTimeline('.about', 'top 20%', '+5000', 1, true);
@@ -93,7 +93,7 @@ const containerChina = () => {
   });
   tl.to('.img__china--human', {
     autoAlpha: 1,
-    duration: .5,
+    duration: 0.5,
   });
   tl.to('.first', {
     autoAlpha: 0,
@@ -105,7 +105,7 @@ const containerChina = () => {
   });
   tl.to('.img__sheng', {
     autoAlpha: 1,
-    duration: .5,
+    duration: 0.5,
   });
   tl.to('.second', {
     autoAlpha: 1,
@@ -125,20 +125,69 @@ const containerChina = () => {
   });
 };
 
-const containerJourcney = () => {
-  let tl = createTimeline('.journey__container', 'top top', '+3000', .5, true);
-  
-  tl.set('.txt-wrap,.img__footstep, img__footstep-l2, img__footstep-l', {
+const containerJourney = () => {
+ /*  let tl = createTimeline(
+    '.journey__container',
+    'top top',
+    '+=1000',
+    0.1,
+   true
+  );  */
+
+  let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.journey__container',
+    start: "top top",
+    end: '+=6000',
+    pin: true,
+    unpin: ()=>
+      window.scrollY > '+=400',
+  }
+});
+ 
+
+
+
+  tl.set('.txt-wrap,.img__footstep, img__footstep-last, img__footstep-l', {
     autoAlpha: 0,
   });
-  tl.to('.txt__first', { autoAlpha: 1, duraiton: 0.2});
-  tl.to('.img__footstep:nth-child(2)', { autoAlpha: 1, duraiton: 0.2 });
-  tl.to('.img__footstep:nth-child(3)', { autoAlpha: 1, duraiton: 0.2 });
-  tl.to('.txt-silkroad', { autoAlpha: 1, duraiton: 0.2 });
-  tl.to('.img__footstep:nth-child(5)', { autoAlpha: 1, duraiton: 0.2 });
-  tl.to('.img__footstep:nth-child(6)', { autoAlpha: 1, duraiton: 0.2 });
-  tl.to('.img__light--off', { autoAlpha: 0, duration: 0.1 });
-  tl.to('.img__light--on',{autoAlpha:1, display:'block', duration:0.1});
+  tl.to('.txt__first', { autoAlpha: 1, scale:1.1, ease: 'slowMo' ,duration: 1});
+  tl.to('.img__footstep:nth-child(2)', { autoAlpha: 1, duration: 1 });
+  tl.to('.img__footstep:nth-child(3)', { autoAlpha: 1, duration: 1 });
+  tl.to('.txt-silkroad', { autoAlpha: 1, scale: 1.1, duration: 1 });
+  tl.to('.img__footstep:nth-child(5)', { autoAlpha: 1, duration: 1 });
+  tl.to('.img__footstep:nth-child(6)', { autoAlpha: 1, duration: 1 });
+  tl.to('.txt__last', { autoAlpha: 1, scale: 1.1, duration: 1 });
+  
+  tl.to('.img__footstep-l', { autoAlpha: 1, duration: 1 });
+  tl.to('.img__footstep-last', { autoAlpha: 1, duration: 1 });
+  tl.to('.img__light--off', { autoAlpha: 0, duration: 0 });
+  tl.to('.img__light--on', { autoAlpha: 1, display: 'block', duration: 0 });
+};
+
+const containerIntroGermany = () =>{
+  let tl = createTimeline(
+    '.germany__container--one',
+    'center +=100',
+    '+1000',
+    1,
+    true
+  );
+
+  tl.set('.chapter__title',{
+    display: 'block',
+  })
+  tl.from('.chapter__title',{
+    opacity:'50%',
+  })
+
+} 
+
+
+const containerShadow = () =>{
+ let tl = createTimeline('.germany__container--one', 'top -=300', '+2000', 1, true);
+
+  
 }
 
 const largeScreenSize = () => {};
@@ -165,8 +214,12 @@ const init = () => {
   });
  */
 
-  containerChina();
-  containerJourney();
+
+
+/*   containerChina(); */
+  /* containerJourney(); */
+  containerIntroGermany();
+  containerShadow();
 
   intersectionObserver();
   $playSound.addEventListener('click', toggleAudio);
