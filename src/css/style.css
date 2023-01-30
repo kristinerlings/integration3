@@ -82,11 +82,9 @@ body {
   display:none;
 } */
 
- .bg__grained {
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-}  
+/* .img__shadow, .img__shadow--m{
+clip-path: circle(40%);
+} */
 
 
 /*Hidden properties*/
@@ -125,7 +123,6 @@ p {
 }
 
 .nav__container {
-  position: relative;
   padding: .6rem 1.25rem;
   display:grid;
   grid-template-columns: 10% 1fr 10%;
@@ -137,6 +134,7 @@ p {
   top: 0;
   width: 100%;
   font-family: var(--ff-h1);
+
 
 }
 
@@ -264,17 +262,8 @@ font-weight: var(--fw-extralight);
  /*  overflow:hidden;  */
 }
 
-/* .img__light-left{
-  left: -4rem;
-  top: -5rem;
-}
- .img__light-right {
-   top: 3rem;
-   right: -10rem;
-   /* left:12rem; 
- }
 
-*/
+
 /*===================== INTRODUCTION N =====================*/
 .introduction__container{
   height: 30vw;
@@ -352,11 +341,16 @@ font-weight: var(--fw-extralight);
 
 /*=====================CHINA N===================== */
 
+
+
+
 .about__china, .about__germany--two{
   background-image: url('./../../assets/bg-paper.png');
   padding:2rem 1rem; 
   display:grid; 
 }
+
+
 
 .txt-wrp-title >h3{
   font-size: clamp(1.0625rem, calc(1.0625rem + ((1vw - 0.1875rem) * 0.8025)), 1.875rem);
@@ -588,7 +582,25 @@ z-index:3;
 }
 
 /*=================== Germany p2 N =====================*/
+.about__germany--two {
+  position: absolute;
+height: 40rem;
+}
 
+.frame {
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+}
+
+.germany__two--left{
+  position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
  .cnt__germany--two div:has(p){
@@ -596,9 +608,10 @@ z-index:3;
  }
 
 .img__harmonica--layers{
-/*   margin: 0 auto;  */
-  z-index: 3;
-  position: relative;
+  position: absolute;
+  top: 40%;
+  right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -755,8 +768,7 @@ z-index:3;
   /*===================== MIM =====================*/
   
   .mim__container{
-    position:relative;
-    z-index:1;
+ 
     color:var(--color-white);
     padding: 4rem 1rem;
     height: 100%;
@@ -843,10 +855,6 @@ z-index:3;
   .header{
     height: 100%;
   }
-  .nav {
-    display: none;
-    transition: 1s ease-in-out;
-  }
 
   .show_nav {
     display: flex;
@@ -895,16 +903,12 @@ z-index:3;
     margin-block-end: 5rem; 
   }
 
-/*   .img__light-left{
-    margin-bottom:21rem;
-  }
-   
-  .img__light-right{
-    top:12rem;
-  }
- */
   p {
     font-size: 1rem;
+  }
+
+  .languages{
+    display:none;
   }
 
 
@@ -1160,6 +1164,9 @@ z-index:3;
   .img__arrows{
     margin-block-start: -2rem;
   }
+  .languages {
+     display: flex;
+   }
   
 }
 

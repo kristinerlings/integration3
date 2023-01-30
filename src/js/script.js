@@ -70,14 +70,25 @@ const createTimeline = (trigger, start, end, scrub, pin) => {
 };
 
 const containerHeader = () => {
-let tl = createTimeline('.header', 'top top', '+=40', 1, true);
-
+let tl = createTimeline('.hero__container', 'top top', '+=40', 1, true);
+/*  let mm = gsap.matchMedia();
+ mm.add("(min-width: 900px)", () => {
 
   tl.to('.img__light--header', {scale:1.1 ,duration: 1});
-  
+ });  */
+ tl.set('img__buildings', {opacity:0})
+ tl.to('img__harmonica', {y:400});
+
+
+
+
+
 }
 
 const containerChina = () => {
+  let tl = createTimeline('.header', 'top top', '+=40', 1, true);
+  
+
  let mm = gsap.matchMedia();
  mm.add("(min-width: 900px)", () => {
 
@@ -152,11 +163,10 @@ const containerJourney = () => {
   let tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.journey__container',
-    start: "top top",
+    start: "top +=200",
     end: '+=1000',
+    scrub:1,
     pin: true,
-    /* unpin: ()=>
-      window.scrollY > 'bottom', */
   }
 });
  
@@ -218,6 +228,24 @@ const containerShadow = () =>{
   /*   let tl = createTimeline('.about__germany', 'top top', '+=2000', 1, true);
   
   or cnt__germany ?*/
+}
+
+const containerHarmonicaLayers = () =>{
+
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.frame',
+      start: 'top +=200',
+      end: '+=1800',
+      pin: true,
+      scrub:.4,
+      toggleActions: 'play none none reverse',
+    },
+  });
+    tl.from('.germany__two--left', { y: '100%', opacity: 0, duration:6 });
+    tl.to('.germany__two--left', { y: '-100%', opacity: 1, duration:6 });
+
 }
 
 const containerHohner = () =>{
@@ -373,6 +401,8 @@ const init = () => {
   containerJourney();
   containerIntroGermany();  //R
   containerShadow();
+  containerHarmonicaLayers();
+
 /*  harmonicaSequences();  */
    containerHohner();
  
