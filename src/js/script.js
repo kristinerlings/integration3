@@ -29,11 +29,6 @@ const createTimeline = (trigger, start, end, scrub, pin) => {
       end: end,
       scrub: scrub,
       pin: pin,
-      markers: true,
-      markers: {
-        startColor: 'white',
-        endColor: 'green',
-      },
     },
   });
   return tl;
@@ -300,9 +295,9 @@ const containerHohner = () => {
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.defaults({
+/*   ScrollTrigger.defaults({
     markers: { startColor: 'brown', endColor: 'brown' },
-  });
+  }); */
 
   containerIntroChina();
   containerChina();
