@@ -50,7 +50,6 @@ const intersectionObserver = () => {
   observer.observe(sectionHohner);
 };
 
-let currentIndex = 0;
 
 const createTimeline = (trigger, start, end, scrub, pin) => {
   let tl = gsap.timeline({
@@ -71,7 +70,28 @@ const createTimeline = (trigger, start, end, scrub, pin) => {
 };
 
 const containerChina = () => {
-  let tl = createTimeline('.about', 'top 20%', '+=5000', 1, true);
+/* tlOne.set(
+    '.hohner__two,  .hohner__two p, .hohner__three,  .hohner__three p',
+    {
+      opacity: 0,
+      display: 'none',
+    }
+  );
+  tlOne.set('.volume__one', { backgroundColor: '#E3C371'});
+  tlOne.to('.img__envelope-l-t, .img__envelope-l-b',{y:500});
+
+
+
+    tl.to('.hohner__one, .hohner__one p', { opacity: 0, display: 'none' });
+    tl.to('.volume__two', { backgroundColor: '#E3C371' });
+    tl.to('.hohner__two, .hohner__two p', {opacity: 1, display:'block'},'<');
+    tl.to('.hohner__two, .hohner__two p', { opacity: 0, display: 'none'});
+    tl.to('.volume__three', { backgroundColor: '#E3C371' });
+    tl.to('.hohner__three, .hohner__three p', {opacity: 1,display: 'block'},'<');
+   
+ */
+
+  let tl = createTimeline('.about__china', 'top 20%', '+=5000', 1, true);
 
   /*   rotation: '180deg', */
 
@@ -125,6 +145,7 @@ const containerChina = () => {
   });
 };
 
+
 const containerJourney = () => {
  /*  let tl = createTimeline(
     '.journey__container',
@@ -151,7 +172,7 @@ const containerJourney = () => {
   tl.set('.txt-wrap,.img__footstep, img__footstep-last, img__footstep-l', {
     autoAlpha: 0,
   });
-  tl.to('.txt__first', { autoAlpha: 1, scale:1.1, ease: 'slowMo' ,duration: 1});
+  tl.to('.txt__first', { autoAlpha: 1, scale:1.1 ,duration: 1});
   tl.to('.img__footstep:nth-child(2)', { autoAlpha: 1, duration: 1 });
   tl.to('.img__footstep:nth-child(3)', { autoAlpha: 1, duration: 1 });
   tl.to('.txt-silkroad', { autoAlpha: 1, scale: 1.1, duration: 1 });
@@ -180,8 +201,13 @@ const containerIntroGermany = () =>{
   tl.to('.img__intrlight--right', {
     opacity:1,
   });
-  tl.to('.chapter__title',{
-    opacity:'50%'},"<50%"); 
+  tl.to(
+    '.chapter__germany',
+    {
+      opacity: '50%',
+    },
+    '<50%'
+  ); 
 
   tl.from('.img__intrlight--left', {
     rotation: -60,
@@ -190,7 +216,7 @@ const containerIntroGermany = () =>{
     scale: 1.4,
   },"<");
 
-  tl.to('.chapter__title', {
+  tl.to('.chapter__germany', {
       opacity: '100%',
   },"<50%");
 
@@ -198,14 +224,135 @@ const containerIntroGermany = () =>{
 
 
 const containerShadow = () =>{
-    let tl = createTimeline('.about__germany', 'top top', '+=2000', 1, true);
-
-    tl.from('.img__shadow', {});
-    tl.from('img__shadow--reveal', {},"<");
-   
+  /*   let tl = createTimeline('.about__germany', 'top top', '+=2000', 1, true);
+  
+  or cnt__germany ?*/
 }
 
-const largeScreenSize = () => {};
+const containerHohner = () =>{
+
+
+
+  let tlOne = createTimeline(
+    '.content__hohner',
+    'top top',
+    '+=300',
+    1,
+    true
+  );
+  tlOne.set(
+    '.hohner__two,  .hohner__two p, .hohner__three,  .hohner__three p',
+    {
+      opacity: 0,
+      display: 'none',
+    }
+  );
+  tlOne.set('.volume__one', { backgroundColor: '#E3C371'});
+  tlOne.to('.img__envelope-l-t, .img__envelope-l-b',{y:500});
+
+  const containerLetter = () =>{
+    let tl = createTimeline('.content__hohner', 'center +=200', '+=4000', 1, true);
+ /*    tl.set( '.hohner__one,  .hohner__one p, .hohner__two,  .hohner__two p, .hohner__three,  .hohner__three p',
+    {
+      display: 'block',
+      autoAlpha: 0,
+    }
+  ); */
+    tl.to('.hohner__one, .hohner__one p', { opacity: 0, display: 'none' });
+    tl.to('.volume__two', { backgroundColor: '#E3C371' });
+    tl.to('.hohner__two, .hohner__two p', {opacity: 1, display:'block'},'<');
+    tl.to('.hohner__two, .hohner__two p', { opacity: 0, display: 'none'});
+    tl.to('.volume__three', { backgroundColor: '#E3C371' });
+    tl.to('.hohner__three, .hohner__three p', {opacity: 1,display: 'block'},'<');
+   
+    
+     
+    /*  tl.from('.img__envelope-l-t, .img__envelope-l-b', { y: -800 }); */
+
+  }
+  containerLetter();
+
+}
+
+const harmonicaSequences = () => {
+  const $canvasHarmonica = document.querySelector(`.canvas__harmonica`);
+    const context = $canvasHarmonica.getContext('2d');
+    $canvasHarmonica.width = 540;
+    $canvasHarmonica.height = 400;
+
+    //framecount for images
+    const imgFrameCount = 366;
+    const imagesArrayContainer = [];
+
+    const currentFrameImage = (index) =>
+      `/assets/sequences-desktop/layer${index + 1}.jpg`;
+
+    for (let i = 0; i < imgFrameCount; i++) {
+      const img = new Image();
+      img.src = currentFrameImage(i);
+      imagesArrayContainer.push(img);
+    }
+
+    const harmonicaFrames = {
+      frame: 0,
+    };
+    
+
+    const renderImgFunction = () => {
+      context.clearRect(0, 0, $canvasHarmonica.width, $canvasHarmonica.height);
+      context.drawImage(
+        imagesArrayContainer[harmonicaFrames.frame],
+        0,
+        0,
+        350,
+        700
+      );
+    };
+
+    imagesArrayContainer[0].onload = renderImgFunction;
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.cnt__germany--two',
+        start: 'top',
+        end: '+=2000',
+        scrub: 0.2,
+        pin: true,
+      },
+      onUpdate: renderImgFunction, // callback for ScrollTrigger
+    });
+    
+    tl.to(harmonicaFrames, {
+      opacity: 1,
+      frame: imgFrameCount - 1,
+      snap: 'frame',
+      duration: 12,
+    });
+};
+
+/* const film = () =>{
+
+ let tl = gsap.timeline({
+     scrollTrigger: {
+    trigger: container,
+    start: 'top center',
+    end: 'bottom center',
+    toggleActions: 'restart none none none',
+    scrub: true,
+      },
+  });
+
+  tl.to('', {
+    y: -100, // Move the image up
+    ease: 'power2.out',
+  });
+  tl.to('', {y: 100, // Move the text down
+  ease: 'power2.out',
+  });
+
+
+} */
+
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -231,10 +378,13 @@ const init = () => {
 
 
 
-/*   containerChina(); */
-  /* containerJourney(); */
- /*  containerIntroGermany(); */ //R
+/*    containerChina();  */
+ /* containerJourney();
+  containerIntroGermany();  *///R
   containerShadow();
+/*   harmonicaSequences(); */
+ /*  containerHohner();
+ */
 
   intersectionObserver();
   $playSound.addEventListener('click', toggleAudio);
