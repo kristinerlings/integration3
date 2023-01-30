@@ -645,7 +645,9 @@ z-index:3;
 
 
 .sound__container {
-  height: 60vw;
+      position: relative;
+      height: 100%;
+      padding: 1rem 0rem;
 }
 
 
@@ -1073,7 +1075,7 @@ z-index:3;
   width: 320px;
   transform: rotate(-20deg);
   order:-1;
-  margin:-10rem 0rem 5rem 0rem; 
+  margin:5rem 0rem 5rem 0rem; 
  }
 
  .btn__sound{
